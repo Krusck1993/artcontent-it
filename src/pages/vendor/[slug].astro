@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RemoteImage from '../../components/RemoteImage.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import VendorNewsList from '../../components/VendorNewsList.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { brands, productsByBrand, getTipologia, exclusiveBrandSlugs, vendorNews, caseStudies } from '../../lib/catalog';
+import { site, zalight } from '../../config/site';
+
+export function getStaticPaths() {
+  return brands.map((brand) => ({ params: { slug: brand.slug }, props: { brand } }));
+}
+
+const { brand } = Astro.props;
+const list = productsByBrand(brand.slug);
+const exclusive = exclusiveBrandSlugs.includes(brand.slug);
+const hasVendorNews = vendorNews.some((n) => n.brand === brand.slug);
+
+// Raggruppa per tipologia (ordine: più prodotti prima)
+const groups = new Map<string, typeof list>();
+for (const p of list) {
+  const key = p.tipologie[0] ?? 'altro';
+  groups.set(key, [...(groups.get(key) ?? []), p]);
+}
+const grouped = [...groups.entries()]
+  .map(([slug, items]) => ({ slug, name: getTipologia(slug)?.name ?? 'Altri prodotti', items }))
+  .sort((a, b) => b.items.length - a.items.length);
+
+// Case study ZAlight che citano il brand o un suo prodotto nel titolo
+const productNames = list.map((p) => p.name.toLowerCase()).filter((n) => n.length >= 6);
+const brandWords = brand.name.toLowerCase().split(/\s+/);
+const related = caseStudies().filter((post) => {
+  const t = post.title.toLowerCase();
+  return brandWords.every((w) => t.includes(w)) || productNames.some((n) => t.includes(n));
+}).slice(0, 3);
+
+const title = `${brand.name} – prodotti e assistenza in Emilia-Romagna e Marche`;
+const description = `${brand.description[0]?.slice(0, 150) ?? `Prodotti ${brand.name}`} ${list.length} prodotti a catalogo ZAlight. Consulenza, demo e preventivi ${brand.name} in Emilia-Romagna e Marche con ARTCONTENT.`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Brand',
+  name: brand.name,
+  url: brand.website ?? brand.zalightUrl,
+  logo: brand.logo ?? undefined,
+  description: brand.description.join(' '),
+};
+---
+
+<BaseLayout title={title} description={description} image={brand.logo ?? undefined} schema={schema}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Vendor', href: '/vendor' }, { label: brand.name }]} />
+  </section>
+
+  <section class="container-x grid gap-10 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div class="card flex items-center justify-center bg-white p-10 sm:p-14">
+      {brand.logo ? <RemoteImage src={brand.logo} alt={brand.name} width={480} priority class="max-h-40 w-auto object-contain" sizes="(min-width:1024px) 40vw, 80vw" /> : <span class="font-display text-4xl font-bold text-ink-900">{brand.name}</span>}
+    </div>
+    <div>
+      <div class="flex flex-wrap gap-2">
+        <span class="chip">Distribuito da ZAlight</span>
+        {exclusive && <span class="chip chip-active">Distribuzione esclusiva Italia</span>}
+      </div>
+      <h1 class="heading-xl mt-4">{brand.name}</h1>
+      <div class="prose-custom mt-6">
+        {brand.description.map((p) => <p>{p}</p>)}
+      </div>
+      <p class="mt-4 text-sm text-ink-300">
+        <strong class="text-ink-50">{list.length}</strong> prodott{list.length === 1 ? 'o' : 'i'} a catalogo · agenzia per Emilia-Romagna e Marche: <strong class="text-ink-50">{site.name}</strong>
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contatti" class="btn-primary">Richiedi informazioni su {brand.name}</a>
+        {brand.website && (
+          <a href={brand.website} target="_blank" rel="noopener" class="btn-secondary">
+            Sito ufficiale ↗
+          </a>
+        )}
+        <a href={brand.zalightUrl} target="_blank" rel="noopener" class="btn-ghost">Su zalight.it ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prodotti per tipologia -->
+  <section class="container-x pb-6" id="prodotti">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <h2 class="heading-lg">Catalogo {brand.name}</h2>
+      <a href={`/prodotti?brand=${brand.slug}`} class="btn-secondary shrink-0">Filtra nel catalogo completo</a>
+    </div>
+    {
+      grouped.length > 1 && (
+        <nav class="mt-6 flex flex-wrap gap-2" aria-label="Tipologie">
+          {grouped.map((g) => (
+            <a href={`#${g.slug}`} class="chip hover:border-amber-400/60 hover:text-amber-300">
+              {g.name} <span class="ml-1 text-ink-500">{g.items.length}</span>
+            </a>
+          ))}
+        </nav>
+      )
+    }
+    {
+      grouped.map((g) => (
+        <div id={g.slug} class="mt-12 scroll-mt-28">
+          <h3 class="heading-md flex items-baseline gap-3">
+            {g.name}
+            <span class="text-sm font-normal text-ink-300">{g.items.length}</span>
+          </h3>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {g.items.map((p) => (
+              <ProductCard product={p} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  {
+    related.length > 0 && (
+      <section class="section bg-ink-900/50">
+        <div class="container-x">
+          <p class="eyebrow">Case study</p>
+          <h2 class="heading-lg mt-3">{brand.name} in scena</h2>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((post) => (
+              <NewsCard post={post} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    hasVendorNews && (
+      <section class="container-x section">
+        <p class="eyebrow">Dal sito ufficiale</p>
+        <h2 class="heading-lg mt-3">Ultime news {brand.name}</h2>
+        <p class="mt-3 max-w-2xl text-sm text-ink-300">Aggiornate automaticamente dal sito del produttore a ogni pubblicazione.</p>
+        <div class="mt-8">
+          <VendorNewsList brand={brand.slug} limit={6} />
+        </div>
+        {brand.website && (
+          <a href={brand.website} target="_blank" rel="noopener" class="btn-ghost mt-6">
+            Tutte le news su {new URL(brand.website).hostname.replace('www.', '')} ↗
+          </a>
+        )}
+      </section>
+    )
+  }
+
+  <CtaBanner
+    title={`Parliamo di ${brand.name}`}
+    description={`Prezzi riservati, disponibilità a magazzino ${zalight.name}, demo e supporto tecnico: siamo il tuo riferimento ${brand.name} in Emilia-Romagna e Marche.`}
+  />
+</BaseLayout>

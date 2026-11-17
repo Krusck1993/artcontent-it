@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import RemoteImage from '../components/RemoteImage.astro';
+import { zalight } from '../config/site';
+
+const title = 'Servizi: consulenza, demo, progetto, formazione e assistenza';
+const description = 'Cosa fa ARTCONTENT per rental, teatri, broadcaster, installatori e lighting designer in Emilia-Romagna e Marche: consulenza tecnico-commerciale, demo on-site, progetti illuminotecnici con rendering 3D, avvio e formazione, post-vendita ZAlight.';
+
+const steps = [
+  { n: '01', title: 'Ascolto e sopralluogo', text: 'Capiamo il contesto: tipo di produzione o spazio, vincoli elettrici e meccanici, budget e tempi. Se serve veniamo sul posto.' },
+  { n: '02', title: 'Proposta tecnica', text: 'Specifichiamo i prodotti più adatti e le alternative tra brand, con confronto di fotometrie, consumi, pesi, controlli e accessori.' },
+  { n: '03', title: 'Demo e verifica', text: 'Vedi e provi i proiettori nelle tue condizioni reali. Rendering 3D del progetto quando il cliente finale deve approvare.' },
+  { n: '04', title: 'Fornitura e avvio', text: 'Ordine, logistica da magazzino ZAlight, supporto in installazione e programmazione dei sistemi di controllo.' },
+  { n: '05', title: 'Formazione e assistenza', text: 'Corsi per i tuoi operatori, garanzia ufficiale, ricambi e centro assistenza in Italia. Restiamo il tuo riferimento nel tempo.' },
+];
+
+const audiences = [
+  { title: 'Service e rental', text: 'Parco luci che si ripaga: IP65, affidabilità in tour, compatibilità con gli standard dei lighting designer internazionali, ricambi rapidi.' },
+  { title: 'Teatri, fondazioni ed enti', text: 'Transizione LED silenziosa e ad alto CRI, sagomatori, retrofit Source Four, procedure d’acquisto e capitolati tecnici.' },
+  { title: 'Broadcast e studi TV/radio', text: 'Pannelli, fresnel e soft light con TLCI elevato, controllo in rete, soluzioni per studi, redazioni e set virtuali.' },
+  { title: 'Installatori e system integrator', text: 'Architetturale indoor/outdoor, networking Art-Net/sACN, PoE, nodi e switch, assistenza alla messa in servizio.' },
+  { title: 'Lighting designer e studi', text: 'Specifiche di prodotto, file fotometrici, modelli 3D, campionature e supporto alle presentazioni al cliente.' },
+  { title: 'Locali, eventi e cerimonie', text: 'Proiettori a batteria wireless, effetti, fumo e aroma per set-up rapidi, eleganti e senza cavi.' },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Servizi' }]} />
+    <SectionHeading as="h1" class="mt-6" eyebrow="Servizi" title="Tecnici prima che commerciali" description="Siamo l’agenzia ZAlight per Emilia-Romagna e Marche: il nostro lavoro è far sì che il prodotto giusto arrivi nel posto giusto e funzioni al meglio. Ecco come." />
+  </section>
+
+  <section class="container-x section pt-12">
+    <ol class="grid gap-5 lg:grid-cols-5">
+      {
+        steps.map((s) => (
+          <li class="card relative p-6">
+            <span class="font-display text-4xl font-extrabold text-amber-500/30">{s.n}</span>
+            <h2 class="mt-3 font-display text-lg font-semibold text-ink-50">{s.title}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">{s.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="bg-ink-900/50">
+    <div class="container-x section grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <p class="eyebrow">Con la forza di ZAlight</p>
+        <h2 class="heading-lg mt-3">Un’agenzia locale, una struttura nazionale alle spalle</h2>
+        <div class="prose-custom mt-6">
+          <p>
+            Dietro ogni nostra proposta c’è il reparto tecnico, lo showroom e il magazzino di <strong>ZAlight</strong>: rendering 3D,
+            supporto on-location alla programmazione, corsi teorico-pratici e un centro assistenza ufficiale in Italia per tutti i brand distribuiti.
+          </p>
+          <p>
+            Tu parli con noi, qui sul territorio. Noi attiviamo tutta la filiera: dal pre-sales engineer al tecnico in assistenza, fino alla logistica.
+          </p>
+        </div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          {
+            [
+              ['Assistenza pre-vendita', 'Le soluzioni più adatte per budget e progetto, con le migliori sinergie tra brand.'],
+              ['Progetti illuminotecnici', 'Rendering 3D e consulenza di tecnici di grande esperienza.'],
+              ['Supporto all’installazione', 'Programmazione dei controlli e presenza in tutte le fasi dell’installazione.'],
+              ['Formazione tecnica', 'Corsi per operatori sulla perfetta conoscenza e gestione dei prodotti.'],
+            ].map(([t, d]) => (
+              <div class="rounded-2xl border border-white/6 bg-ink-800/60 p-4">
+                <h3 class="text-sm font-semibold text-ink-50">{t}</h3>
+                <p class="mt-1 text-xs leading-relaxed text-ink-300">{d}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="card overflow-hidden">
+        <RemoteImage src={zalight.teamPhoto} alt="Il team ZAlight" width={960} aspect={4 / 3} fit="cover" class="h-full w-full object-cover" sizes="(min-width:1024px) 50vw, 100vw" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x section">
+    <SectionHeading eyebrow="Per chi lavoriamo" title="Soluzioni su misura per ogni cliente" />
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        audiences.map((a) => (
+          <article class="card card-hover p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">{a.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">{a.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

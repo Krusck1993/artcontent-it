@@ -1,0 +1,865 @@
+{
+  "categories": [
+    {
+      "id": 7,
+      "name": "News",
+      "slug": "news",
+      "count": 67
+    },
+    {
+      "id": 8,
+      "name": "Nuovi prodotti",
+      "slug": "nuovi-prodotti",
+      "count": 0
+    },
+    {
+      "id": 72,
+      "name": "Progetti",
+      "slug": "progetti",
+      "count": 1
+    },
+    {
+      "id": 1,
+      "name": "Senza categoria",
+      "slug": "senza-categoria",
+      "count": 2
+    },
+    {
+      "id": 9,
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "count": 0
+    }
+  ],
+  "posts": [
+    {
+      "id": 18699,
+      "slug": "tiziano-ferrostadi-26-con-maverick-storm-3-beamwash-e-color-strike-m",
+      "date": "2026-07-29T12:51:35",
+      "title": "Tiziano Ferro: ‘Stadi 26’ con Maverick Storm 3 BeamWash e Color Strike M.",
+      "excerpt": "Tiziano Ferro si concede raramente ai suoi fans, ma quando lo fa, è per tutti un’esperienza memorabile.La nuova tournée ‘Stadi 26’ segue dopo ben tre anni il precedente ‘Tiziano Ferro Tour 2023’. Tour che ha segnato il ritorno live di Tiziano dopo 6 anni di assenza dai palcoscenici italiani.‘Stadi 26’ si è snodato, tra Maggio…",
+      "url": "https://www.zalight.it/tiziano-ferrostadi-26-con-maverick-storm-3-beamwash-e-color-strike-m/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/09-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18534,
+      "slug": "venere-in-musica-lavanguardia-musicale-in-scena-con-chauvet-professional",
+      "date": "2026-07-09T11:27:06",
+      "title": "‘Venere in Musica’: l’avanguardia musicale in scena con i Colorado PXLCurve 1.",
+      "excerpt": "Il Parco archeologico del Colosseo ha presentato, dal 18 al 25 Giugno, la quinta edizione di ‘Venere in Musica’. Un evento che dalla sua nascita unisce il prestigio di un patrimonio culturale unico al mondo, con le tendenze più all'avanguardia della musica contemporanea Internazionale. Tra le novità di quest'anno spicca l'utilizzo della Colorado PXL Curve…",
+      "url": "https://www.zalight.it/venere-in-musica-lavanguardia-musicale-in-scena-con-chauvet-professional/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/venere-in-musica-2026-.jpg-e1783589206814-1024x619.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18461,
+      "slug": "zalight-mode-distribuzione-esclusiva-sollevamento-spettacolo-italia",
+      "date": "2026-07-01T11:27:51",
+      "title": "ZAlight e MODE: il sollevamento diventa \"smart\".",
+      "excerpt": "ZAlight prosegue la sua costante crescita nel mercato italiano, con una presenza progressiva nei settori strategici dell'illuminazione professionale e con l'integrazione di importanti marchi internazionali nel proprio portfolio. Questo percorso accelera ulteriormente grazie all'accordo con MODE, leader mondiale nelle soluzioni di sollevamento intelligenti per il settore dello spettacolo. Le due aziende hanno formalizzato, con un…",
+      "url": "https://www.zalight.it/zalight-mode-distribuzione-esclusiva-sollevamento-spettacolo-italia/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/8a0a119b-5b14-420a-8fee-515701fa181b_cleanup-e1782899421902.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18429,
+      "slug": "104-color-strike-m-scatenano-lenergia-allevento-netflix-due-spicci-di-zerocalcare",
+      "date": "2026-06-25T17:56:49",
+      "title": "104 Color Strike M scatenano l'energia all'evento Netflix \"Due Spicci\" di Zerocalcare",
+      "excerpt": "Roma, Circo Massimo Oltre 100 strobo/wash motorizzati, un'infinita \"onda energetica\" e un'arena trasformata in un gigantesco videogioco a cielo aperto. È questo l'imponente scenario visivo realizzato per la presentazione della miniserie Netflix \"Due Spicci\" di Zerocalcare al Circo Massimo. A fornire e gestire l'imponente infrastruttura tecnica è stato il service D&D International Group. Sotto la…",
+      "url": "https://www.zalight.it/104-color-strike-m-scatenano-lenergia-allevento-netflix-due-spicci-di-zerocalcare/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/06/01.10-e1782403274633.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18057,
+      "slug": "nameless-winter-2026-e-chauvet-professional-energia-pura",
+      "date": "2026-03-16T12:58:25",
+      "title": "Nameless Winter 2026 e Chauvet Professional: energia pura.",
+      "excerpt": "Per due giorni, il 14 e il 15 Febbraio, Barzio – la perla della Valsassina, in provincia di Lecco – è diventata la location di riferimento per migliaia di appassionati di dance elettronica.Nameless Winter 2026 non è stato solo un evento musicale di primo piano, ma per tutti i partecipanti, anche un’esperienza immersiva nella natura,…",
+      "url": "https://www.zalight.it/nameless-winter-2026-e-chauvet-professional-energia-pura/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/03/Puma_NMLSSWINTER26_DAY2_@moss.ma_1N1A0434-683x1024.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17999,
+      "slug": "bozza-automatica",
+      "date": "2026-03-02T12:59:42",
+      "title": "Sanremo 2026: Chauvet Professional illumina gli artisti del Festival ai Live di Radio Italia",
+      "excerpt": "ZAlight era presente all’edizione 2026 del seguitissimo ‘Radio Italia Fuori Sanremo Italiana Assicurazioni’, con un setup luci super performante e flessibile, allestito negli spazi del Grand Hotel Londra di Sanremo: uno studio 100% Chauvet Professional.Dalle barre LED motorizzate Colorado PXL Curve 12, al rivoluzionario strobo LED con Smart Frost Strike Bolt 1C; dai cyclorama Ovation Cyc…",
+      "url": "https://www.zalight.it/bozza-automatica/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/03/scenografia-luminosa-radio-italia-sanremo.jpg-e1772452738928-1024x701.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17905,
+      "slug": "ma-noi-siamo-fuoco-tour-annalisa-travolgente-con-colorado-pxl-curve-12",
+      "date": "2025-12-12T13:22:10",
+      "title": "‘Ma noi siamo fuoco tour’: Annalisa travolgente, con Colorado PXL Curve 12",
+      "excerpt": "L‘atteso ritorno live di Annalisa con il tour ‘Ma noi siamo fuoco - Capitolo 1’ ha replicato il successo del suo nuovo album ‘Ma io sono fuoco’, uscito lo scorso Ottobre. Uno spettacolo arricchito da un energetico light show, creato da Denso Studio. Le luci esaltano l’esuberante personalità artistica di Annalisa, in perfetta sintonia con…",
+      "url": "https://www.zalight.it/ma-noi-siamo-fuoco-tour-annalisa-travolgente-con-colorado-pxl-curve-12/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/12/annalisa-concerto-ma-noi-siamo-fuoco-03.jpg-e1765541058341-1024x995.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17812,
+      "slug": "chauvet-professional-illumina-il-salmo-world-tour-2025",
+      "date": "2025-11-24T12:41:00",
+      "title": "Chauvet Professional illumina il Salmo World Tour 2025",
+      "excerpt": "Il “SALMO WORLD TOUR 2025” è uno degli show più potenti e riconoscibili del panorama rap italiano: un impatto visivo incredibile, atmosfere che cambiano in un battito e una presenza luminosa che domina e trasforma i palasport grazie ai proiettori Chauvet Professional. Uno show studiato nei minimi dettagli: fiamme che esplodono a tempo, ledwall giganteschi…",
+      "url": "https://www.zalight.it/chauvet-professional-illumina-il-salmo-world-tour-2025/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/11/IMG_1559-scaled-e1763987051334-1024x733.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17780,
+      "slug": "90-color-strike-m-per-il-live-in-europe-2025-di-marco-mengoni",
+      "date": "2025-11-17T15:19:14",
+      "title": "90 Color Strike M per il Live in Europe 2025 di Marco Mengoni.",
+      "excerpt": "Il nuovo tour 'Live in Europe 2025' Dopo il successo della tournée estiva Marco Negli Stadi 2025 – uno degli eventi più attesi della stagione – Marco Mengoni è tornato ad esibirsi sui palchi dei palazzetti più importanti d’Italia e d’Europa. Il nuovo tour Live in Europe 2025, ripropone ad un pubblico ancora più ampio uno…",
+      "url": "https://www.zalight.it/90-color-strike-m-per-il-live-in-europe-2025-di-marco-mengoni/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/11/mengoni-live-2025-color-strike-m-01.jpg-e1763381701397-1024x615.jpg",
+      "categories": [
+        "news",
+        "senza-categoria"
+      ]
+    },
+    {
+      "id": 17744,
+      "slug": "chauvet-maverick-storm-color-strike-tozzi-arena-verona",
+      "date": "2025-10-28T17:11:33",
+      "title": "Arena di Verona sold-out per Tozzi, con Chauvet Professional.",
+      "excerpt": "‘L’Ultima Notte Rosa – The Final Tour’, la lunga tournée mondiale in 4 continenti con cui Umberto Tozzi ha dato il suo addio alle scene, si è conclusa lo scorso 5 Ottobre con uno spettacolare concerto all’Arena di Verona. Era esaurita in ogni ordine di posti. Una straordinaria cornice che ha riverberato i colori di un…",
+      "url": "https://www.zalight.it/chauvet-maverick-storm-color-strike-tozzi-arena-verona/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/10/color-strike-m-muro-colore-musicisti.jpg-e1761666853570-1024x539.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17634,
+      "slug": "battiti-live-2025-pulsa-con-color-strike-m-e-colorado-pxl-bar-16",
+      "date": "2025-10-03T17:10:31",
+      "title": "‘Battiti Live 2025’ pulsa con Color Strike M e Colorado PXL Bar 16",
+      "excerpt": "‘Cornetto Battiti Live’ si accende con 130 proiettori Chauvet Professional. Dal 18 al 22 giugno, la Puglia è diventata il cuore pulsante della musica italiana, con l’atteso arrivo della 23a edizione di ‘Cornetto Battiti Live 2025’. L’evento di punta della programmazione estiva delle reti Mediaset.‘Cornetto Battiti Live’, svoltosi nella suggestiva cornice di Molfetta, ha ospitato…",
+      "url": "https://www.zalight.it/battiti-live-2025-pulsa-con-color-strike-m-e-colorado-pxl-bar-16/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/10/color-strike-m-effetti-luci-battiti-2025-2.jpg-2-e1759503717264-1024x636.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17575,
+      "slug": "la-notte-di-certe-notti-si-illumina-con-chauvet-professional",
+      "date": "2025-09-24T17:27:56",
+      "title": "La Notte di Certe Notti si illumina con Chauvet Professional",
+      "excerpt": "Jo Campana racconta il dietro le quinte dello Show. Lo scorso 5 Settembre alla Reggia di Caserta è andata in scena la seconda tappa dell’evento live di Luciano Ligabue ‘La Notte di Certe Notti’, attesissimo seguito della spettacolare ‘prima’ svoltasi al Campovolo di Reggio, con un pubblico di 100.000 fans. Un concerto che ha celebrato…",
+      "url": "https://www.zalight.it/la-notte-di-certe-notti-si-illumina-con-chauvet-professional/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/09/Immagine-ALTA-RISOLUZIONE-1024x682.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17438,
+      "slug": "ultimo-stadi-2025-colorado-pxl-curve",
+      "date": "2025-08-29T15:53:38",
+      "title": "‘Ultimo Stadi 2025 – La favola continua’: un tour trionfale con le Colorado PXL Curve 12.",
+      "excerpt": "Ultimo Stadi 2025, intitolato \"La favola continua\", il tour estivo di Ultimo. Si è concluso trionfalmente sul prato del San Nicola di Bari, con l’ultima di dieci date tutte sold-out. Il tour, svoltosi nei più grandi stadi italiani, tra cui l’Olimpico e San Siro, ha rappresentato una nuova straordinaria affermazione per il giovanissimo cantautore, che…",
+      "url": "https://www.zalight.it/ultimo-stadi-2025-colorado-pxl-curve/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/08/Foto-Ultimo-Sito-e1756797194153-1024x531.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17429,
+      "slug": "chauvet-professional-foro-italico",
+      "date": "2025-08-26T12:52:08",
+      "title": "Chauvet Professional al Foro Italico con Gigi D'Agostino.",
+      "excerpt": "Un evento unico nel cuore di Roma Il Foro Italico di Roma ha ospitato lo scorso 24 Luglio una serata evento con l’icona della tecno-dance, il leggendario Gigi D'Agostino, illuminato dallo spettacolo firmato Chauvet Professional, che da 30 anni fa ballare intere generazioni al suono dei suoi ritmi elettronici. Infatti, è stata una notte unica…",
+      "url": "https://www.zalight.it/chauvet-professional-foro-italico/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/08/DAG-3_cleanup-e1756205655386.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17398,
+      "slug": "ozuna-live-alien-sound-festival-2025",
+      "date": "2025-08-20T13:15:54",
+      "title": "Ozuna live all’Alien Sound Festival, con Colorado PXL Bar 16 e Color Strike M.",
+      "excerpt": "“Le PXL Bar 16 e le Color Strike M, con i loro effetti luminosi così straordinari da sembrare realmente ‘extraterrestri’, sono state perfette per illuminare l’Alien Sound Festival, un evento totalmente diverso dagli altri per musica, scenografia e impatto visivo” – ha dichiarato Marco Spina, Production Manager della manifestazione. “Abbiamo specificato le 20 PXL Bar…",
+      "url": "https://www.zalight.it/ozuna-live-alien-sound-festival-2025/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/08/color-strike-m-luci-festival-2025.jpg-e1755688717319-1024x647.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17328,
+      "slug": "cremonini-live-chauvet-proiettori",
+      "date": "2025-08-07T12:40:22",
+      "title": "400 proiettori Chauvet Professional sul palco del ‘CremoniniLive25’.",
+      "excerpt": "Il tour CremoniniLive25 si è distinto per l’uso innovativo dei proiettori Chauvet, creando uno spettacolo indimenticabile. L’incontro tra Chauvet e Cremonini ha dato vita a un light show unico. Il maxi tour di Cesare Cremonini, partito lo scorso Giugno a Lignano, che ha attraversato per due mesi il Paese facendo tappa nei maggiori stadi italiani.,…",
+      "url": "https://www.zalight.it/cremonini-live-chauvet-proiettori/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/08/chauvet-color-strike-m-cremonini-live25.jpg-e1754565157937-1024x618.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17205,
+      "slug": "cm-orchestra-tony-hadley-tones-teatro-natura",
+      "date": "2025-07-19T17:44:54",
+      "title": "CM Orchestra e Tony Hadley: magia pura al Tones Teatro Natura con Chauvet Professional",
+      "excerpt": "Il Tones Teatro Natura di Crevoladossola ha ospitato un evento straordinario: il concerto della CM Orchestra con Tony Hadley, ex frontman degli Spandau Ballet. In uno scenario di incomparabile suggestione – una ex cava di marmo trasformata in un palcoscenico naturale unico al mondo – la serata ha regalato emozioni indimenticabili, tra grande musica e…",
+      "url": "https://www.zalight.it/cm-orchestra-tony-hadley-tones-teatro-natura/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/07/PSX_20250721_155445-1-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17191,
+      "slug": "vasco-live-2025-un-tour-memorabile-con-maverick",
+      "date": "2025-07-09T22:22:30",
+      "title": "Vasco Live 2025: un tour memorabile con Maverick Storm 3 BeamWash",
+      "excerpt": "Si è appena concluso il Vasco Live 2025, un tour trionfale che ha infiammato sette grandi stadi italiani. Dal 26 maggio al 28 giugno si sono tenuti due concerti per ogni tappa, tutti sold-out. Uno show imponente, reso ancora più spettacolare dall’uso innovativo dei Maverick Storm 3 BeamWash, proiettori ad alte prestazioni che hanno definito…",
+      "url": "https://www.zalight.it/vasco-live-2025-un-tour-memorabile-con-maverick/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/07/PHOTO-2025-07-09-13-07-39-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17178,
+      "slug": "chauvet-professional-al-radio-italia-live-2025",
+      "date": "2025-07-08T22:28:48",
+      "title": "Chauvet Professional al Radio Italia Live 2025",
+      "excerpt": "Due eventi imperdibili hanno appena attraversato l’Italia, illuminati dalla tecnologia firmata Chauvet Professional al Radio Italia Live 2025: il più grande concerto gratuito del Paese ha acceso Piazza Duomo a Milano il 30 maggio e il Foro Italico di Palermo il 27 giugno, portando in scena il meglio della musica italiana. Sul palco si sono…",
+      "url": "https://www.zalight.it/chauvet-professional-al-radio-italia-live-2025/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/07/Foto-30-05-25-21-22-13-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17132,
+      "slug": "200-color-strike-m-e-colorado-pxl-bar-per-il-palajova",
+      "date": "2025-06-18T08:25:40",
+      "title": "200 Color Strike M e Colorado PXL Bar 16 per il PalaJova.",
+      "excerpt": "Il tour PalaJova di Jovanotti, illuminato principalmente con i proiettori Color Strike M, è partito il 4 marzo scorso, segnando il ritorno live dell’artista dopo una lunga pausa. Un rientro altamente spettacolare sulle scene, grazie ad un allestimento scenico assolutamente innovativo, con movimentazioni e tecnologie illuminotecniche d’avanguardia. Intervista a Josh Geromin, LD del PalaJova Abbiamo…",
+      "url": "https://www.zalight.it/200-color-strike-m-e-colorado-pxl-bar-per-il-palajova/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/06/IMG-20250606-WA0024_114130-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17108,
+      "slug": "color-strike-m-illuminazione-link-ilario-alicante",
+      "date": "2025-05-25T22:56:02",
+      "title": "Color Strike M on-stage con Ilario Alicante, all’Ex Macello di Milano.",
+      "excerpt": "Gli spazi post-industriali, infatti, sono stati intelligentemente riqualificati secondo le esigenze di vivibilità e fruibilità ludica e culturale contemporanee. Pertanto, si dimostrano i setting ideali per i grandi eventi di musica tecno / elettronica.In particolare, i proiettori Color Strike M di Chauvet Professional hanno illuminato l’anteprima mondiale di Link, il nuovo progetto di Ilario Alicante,…",
+      "url": "https://www.zalight.it/color-strike-m-illuminazione-link-ilario-alicante/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/05/PSX_20250522_101933.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 17055,
+      "slug": "spotrack-massima-versatilita-per-il-road-show-2025-di-unipol-assicurazioni",
+      "date": "2025-04-15T22:51:04",
+      "title": "Spotrack e il Road Show 2025 di Unipol Assicurazioni.",
+      "excerpt": "Pubblicato il 15.04.2025 Spotrack, il rivoluzionario sistema protagonista del Road Show 2025 di Unipol Assicurazioni, conclusosi lo scorso 11 marzo a Milano dopo quattro tappe in tutta Italia: Napoli, Roma, Bologna e Milano. Durante l’evento, Unipol ha scelto questa tecnologia di followspot digitale per garantire un’illuminazione precisa e versatile, perfettamente adatta alle esigenze di uno…",
+      "url": "https://www.zalight.it/spotrack-massima-versatilita-per-il-road-show-2025-di-unipol-assicurazioni/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/04/4.jpg",
+      "categories": [
+        "senza-categoria"
+      ]
+    },
+    {
+      "id": 16833,
+      "slug": "zalight-al-mir2025-tutto-fuorche-lordinario",
+      "date": "2025-04-02T22:24:23",
+      "title": "Zalight al MIR2025: tutto fuorché l’ordinario!",
+      "excerpt": "Ringraziamo i tanti professionisti, clienti e nuovi amici che hanno affollato il nostro stand durante i tre intensi giorni del MIR2025. Abbiamo presentato uno stand importante, ricco di novità hi-tech e molto accogliente. Concepito come un open space, era un vero meeting-place. Invitava il pubblico a entrare, conoscere e testare i nuovi prodotti, oltre a…",
+      "url": "https://www.zalight.it/zalight-al-mir2025-tutto-fuorche-lordinario/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/04/PSX_20250402_112103-1-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16810,
+      "slug": "final-tour-umberto-tozzi-colorado-pxl-strike-bolt",
+      "date": "2025-03-27T23:15:20",
+      "title": "Il ‘Final Tour’ di Umberto Tozzi in scena con Chauvet Professional.",
+      "excerpt": "Colorado PXL Curve 12 e Strike Bolt 1C ‘L’Ultima Notte Rosa – The Final Tour’, la tournée dell’intramontabile icona della musica pop Umberto Tozzi, sta attraversando Teatri e palazzetti in tutta Italia con tutto esaurito ed un successo travolgente.Successo tributatogli da un pubblico di fans che ha duettato con lui sulle note di Gloria, Stella…",
+      "url": "https://www.zalight.it/final-tour-umberto-tozzi-colorado-pxl-strike-bolt/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/03/OK-IMG-20250317-WA0008_082710-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16689,
+      "slug": "performance-e-versatilita-hi-tech-per-il-fuori-sanremo-di-radio-italia-con-zalight",
+      "date": "2025-02-16T22:32:02",
+      "title": "Zalight al ‘Fuori Sanremo’ di Radio Italia: versatilità e hi-tech",
+      "excerpt": "Pubblicato il 16.02.2025 Zalight e Radio Italia: anche nell’edizione 2025 del celebre Radio Italia Live – Fuori Sanremo, Zalight ha confermato la sua presenza con un allestimento luci hi-tech e altamente flessibile.Ivan Lavezzoli, LD dell’evento, ha progettato una infrastruttura illuminotecnica molto performante ma anche facilmente adattabile alle differenti situazioni (interviste, esibizioni live degli artisti) che…",
+      "url": "https://www.zalight.it/performance-e-versatilita-hi-tech-per-il-fuori-sanremo-di-radio-italia-con-zalight/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/02/Copertina-1024x768.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16673,
+      "slug": "zalight-allise-tutte-le-novita-per-il-2025",
+      "date": "2025-02-16T21:28:31",
+      "title": "Zalight all'ISE 2025: tutte le novità!",
+      "excerpt": "Pubblicato il 16.02.2025 Zalight ha partecipato all’ISE 2025, la più importante fiera europea dedicata alle tecnologie AV e all’illuminazione professionale, presentando insieme ai brand distribuiti in esclusiva tutte le novità che anticipano le tendenze del prossimo anno. All’interno degli stand di Chauvet Professional, Chauvet DJ, Innled e Fantek, Zalight ha mostrato in anteprima ai clienti…",
+      "url": "https://www.zalight.it/zalight-allise-tutte-le-novita-per-il-2025/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/02/Mappa-per-Web-826x1024.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16630,
+      "slug": "zalight-migliore-distributore-chauvet-professional-area-emea-nel-2024",
+      "date": "2025-02-04T08:36:17",
+      "title": "Zalight premiata come miglior Distributore Chauvet EMEA 2024",
+      "excerpt": "Pubblicato il 04.02.2025 ZAlight è stata riconosciuta come miglior distributore Chauvet EMEA 2024. Il premio è stato assegnato durante il Distributor Meeting, tenutosi alla vigilia dell’ISE di Barcellona 2025. Questo evento ha visto la partecipazione dei principali distributori del brand americano nella regione Europa, Medio Oriente e Africa (EMEA). Ricevere questo riconoscimento ci riempie di…",
+      "url": "https://www.zalight.it/zalight-migliore-distributore-chauvet-professional-area-emea-nel-2024/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/02/PREMIO-IN-4-1024x768.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16596,
+      "slug": "i-prodotti-chauvet-professional-protagonisti-a-zelig-2025",
+      "date": "2025-01-25T15:32:00",
+      "title": "I prodotti Chauvet Professional protagonisti a Zelig 2025",
+      "excerpt": "Le luci Chauvet Professional illuminano Zelig 2025: PXL Bar 16 e Rogue R3 Beam firmano la scena al Teatro Arcimboldi con Zalight.",
+      "url": "https://www.zalight.it/i-prodotti-chauvet-professional-protagonisti-a-zelig-2025/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2025/01/1A.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 16072,
+      "slug": "amg-international-accende-afterlife-con-chauvet-professional",
+      "date": "2024-10-25T16:10:25",
+      "title": "AMG International accende Afterlife con Chauvet Professional.",
+      "excerpt": "Lo scorso 21 Settembre 2024, all’Ippodromo Snai di San Siro, si è svolto 𝐀𝐟𝐭𝐞𝐫𝐥𝐢𝐟𝐞 l’appuntamento techno più importante del mondo. Ideato dai Tale of Us, tornato in Italia dopo i grandissimi successi di Parigi, New York, Buenos Aires e Città del Messico.La line-up ha visto alternarsi sul palco Mind Against, Massano e Olympe, ma a…",
+      "url": "https://www.zalight.it/amg-international-accende-afterlife-con-chauvet-professional/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/10/QZ1A4050-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15747,
+      "slug": "zalight-e-il-nuovo-distributore-esclusivo-dei-prodotti-chauvet-dj-in-italia",
+      "date": "2024-09-13T15:24:43",
+      "title": "ZAlight è il nuovo distributore esclusivo dei prodotti Chauvet DJ in Italia.",
+      "excerpt": "Importanti sviluppi nella collaborazione tra il produttore americano Chauvet Lighting e il distributore italiano: in un comunicato congiunto, infatti, le due aziende hanno ufficializzato il conferimento a ZAlight della distribuzione esclusiva dei prodotti Chauvet DJ in Italia. “E’ un grande piacere annunciare che ZAlight – già nostro partner di successo con il brand Chauvet Professional…",
+      "url": "https://www.zalight.it/zalight-e-il-nuovo-distributore-esclusivo-dei-prodotti-chauvet-dj-in-italia/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/09/FOTO-UFFICIALE-CDJ-ZALIGHT-768x1024.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15486,
+      "slug": "colorado-pxl-curve-12-e-pxl-bar-16-accendono-il-kappa-futurfestival-2024",
+      "date": "2024-08-05T19:53:59",
+      "title": "Colorado PXL Curve 12 e PXL Bar 16 accendono il Kappa FuturFestival 2024.",
+      "excerpt": "Il lighting design di Chauvet Professional sul palco del festival Si è svolto dal 5 al 7 Luglio, nell’iconica area post-industriale del Parco Dora di Torino, il Kappa FuturFestival, l’evento di musica elettronica più atteso dell'estate italiana.Una line up stellare quella dell’edizione 2024, con i più famosi DJ della scena techno house internazionale, come Tale of…",
+      "url": "https://www.zalight.it/colorado-pxl-curve-12-e-pxl-bar-16-accendono-il-kappa-futurfestival-2024/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/08/KFF24-4-1024x682.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15397,
+      "slug": "100-maverick-storm-3-beamwash-esaltano-piazza-san-marco-con-i-loro-colori",
+      "date": "2024-07-17T20:05:27",
+      "title": "100 Maverick Storm 3 BeamWash esaltano Piazza San Marco.",
+      "excerpt": "100 teste mobili Maverick Storm 3 BeamWash di Chauvet Professional hanno immerso Piazza San Marco in una affascinante atmosfera fatta di luci e colori. Gli Storm 3 BeamWash di Chauvet Professional – installati da Agorà, primo service italiano ad utilizzarli – sono stati i protagonisti dell’allestimento luci dei due concerti dei Pooh del 5 e…",
+      "url": "https://www.zalight.it/100-maverick-storm-3-beamwash-esaltano-piazza-san-marco-con-i-loro-colori/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/07/FB_IMG_1721064027777-1024x682.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15370,
+      "slug": "cm-orchestra-ft-nina-zilli-in-concerto-con-rogue-outcast-e-strike-bolt",
+      "date": "2024-07-10T10:07:29",
+      "title": "CM Orchestra ft Nina Zilli, in concerto con Rogue Outcast e Strike Bolt.",
+      "excerpt": "Il Tones Teatro Natura di Crevoladossola, una ex cava di marmo trasformata in un palcoscenico naturale di suggestiva bellezza, ha ospitato il concerto della CM Orchestra, big band di 60 musicisti, a cui si è unita per l’occasione un’ospite d’eccezione: l’esplosiva Nina Zilli.Grande musica e una affascinante scenografia, arricchite dal suggestivo light show creato con…",
+      "url": "https://www.zalight.it/cm-orchestra-ft-nina-zilli-in-concerto-con-rogue-outcast-e-strike-bolt/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-06-at-23.17.26-63-e1720599925573-1024x720.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15360,
+      "slug": "100-color-strike-m-per-il-tour-di-vasco",
+      "date": "2024-07-04T16:55:43",
+      "title": "100 Color Strike M by Chauvet Professional per il tour di Vasco.",
+      "excerpt": "Il popolo di Vasco, un mosaico intergenerazionale, si è mosso lungo tutta la penisola per incontrarsi festosamente e condividere insieme le storie di un artista che da 46 anni parla al cuore dei suoi fans con canzoni indimenticabili.Quello appena concluso, più che un tour, è stata una mega-residency. Sette date a San Siro e quattro…",
+      "url": "https://www.zalight.it/100-color-strike-m-per-il-tour-di-vasco/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/07/IMG_20240626_2215352-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15223,
+      "slug": "open-day-experience-zalight",
+      "date": "2024-05-16T22:51:19",
+      "title": "Open Day Experience - ZALIGHT",
+      "excerpt": "ZAlight invita calorosamente tutti i professionisti dell’illuminazione, lighting designer, tecnici del suono e operatori del settore spettacolo all’esclusivo Open Day eXperience. L'appuntamento è fissato per il prossimo 22 Maggio, dalle ore 10:00 alle 18:00, nella prestigiosa cornice degli studi di Radio Italia a Cologno Monzese. Questo evento rappresenta un’occasione imperdibile per chi desidera toccare con…",
+      "url": "https://www.zalight.it/open-day-experience-zalight/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/05/bannerino-per-il-sito-239x368_con-banda-01.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 15024,
+      "slug": "un-grande-team-per-un-grande-mir",
+      "date": "2024-04-14T22:31:50",
+      "title": "Un grande Team per un grande MIR!",
+      "excerpt": "Ringraziamo i professionisti del lighting e tutti gli amici che hanno affollato il nosto stand nei tre giorni del MIR 2024; l’interesse dimostrato per le novità che abbiamo presentato ci riempie di soddisfazione. Quest’anno abbiamo raddoppiato lo spazio espositivo, per ospitare i grandi marchi internazionali che distribuiamo in esclusiva, e presentare una serie di assolute…",
+      "url": "https://www.zalight.it/un-grande-team-per-un-grande-mir/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/04/TEAM-ZALIGHT-IMG-20240411-WA0010-768x1024.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 14874,
+      "slug": "zalight-raddoppia-al-mir-2024",
+      "date": "2024-03-15T11:37:44",
+      "title": "Zalight raddoppia al MIR 2024!",
+      "excerpt": "ZAlight da appuntamento a tutti i professionisti del lighting nel proprio stand, al MIR 2024, evento imperdibile in un mercato in costante evoluzione.Quest’anno, ZAlight raddoppia il suo spazio espositivo, per accogliere tutte le novità appena presentate al LDI e all’ISE dai grandi brand internazionali che distribuisce in esclusiva.Uno stand suddiviso in 5 aree espositive: Eventi, Broadcast, Teatro, Spettacolo e Installazione, in…",
+      "url": "https://www.zalight.it/zalight-raddoppia-al-mir-2024/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/03/BOX-news-sito_239x368-01.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 14815,
+      "slug": "colorado-pxl-curve-12-al-fuori-sanremo-di-radio-italia",
+      "date": "2024-02-23T22:04:06",
+      "title": "Colorado PXL Curve 12 al Fuori Sanremo di Radio Italia.",
+      "excerpt": "L’attesissimo ‘Fuori Sanremo’ di Radio Italia ha ottenuto il successo di pubblico maggiore di sempre, ospitando secondo il suo collaudato format tutti gli artisti del Festival di Sanremo 2024, con interviste ed esibizioni live registrate nello studio appositamente allestito al Grand Hotel Londra.Abbiamo chiesto a Ivan Lavezzoli, Lighting Designer e progettista del setup illuminotecnico di…",
+      "url": "https://www.zalight.it/colorado-pxl-curve-12-al-fuori-sanremo-di-radio-italia/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/02/foto-luci-ivan-radio-italia-fuori-sanremo-09-febbraio-2024-prandoni-07956.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 14782,
+      "slug": "importanti-novita-da-ise-2024-per-zalight",
+      "date": "2024-02-14T22:47:29",
+      "title": "Importanti novità da ISE 2024 per Zalight.",
+      "excerpt": "La ventesima edizione dell’ISE ha registrato la partecipazione di alcuni tra i maggiori brand internazionali distribuiti in Italia da Zalight.Chauvet Professional, presente con uno degli stand più interessanti della fiera, ha esposto le sue ultimissime novità, introdotte al recente LDI 2024 in USA COLORado PXL Curve 12 Una innovativa barra LED costituita da 12 teste mobili…",
+      "url": "https://www.zalight.it/importanti-novita-da-ise-2024-per-zalight/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/02/ISE.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 14761,
+      "slug": "grand-opening-chauvet-zalight-partecipa-alla-inaugurazione-della-nuova-sede-di-miami",
+      "date": "2024-02-09T22:33:16",
+      "title": "Grand Opening Chauvet: inaugurazione della nuova sede di Miami.",
+      "excerpt": "Chauvet Professional ha inaugurato a Miami la sua nuova sede, nel corso di un ‘Grand Opening’ a cui hanno partecipato centinaia di ospiti VIP provenienti da Nord e Sud America, Europa, Asia e Australia, tra cui molti dei più importanti LD internazionali.Zalight ha ricevuto uno speciale invito all’apertura del nuovo complesso, come riconoscimento per essere…",
+      "url": "https://www.zalight.it/grand-opening-chauvet-zalight-partecipa-alla-inaugurazione-della-nuova-sede-di-miami/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2024/02/Zalight@-1-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 14086,
+      "slug": "zalight-distribuisce-spotrack",
+      "date": "2023-10-31T09:31:23",
+      "title": "ZALIGHT distribuisce SPOTRACK - Automated Follow Spot Technology",
+      "excerpt": "Zalight è lieta di annunciare l'acquisizione della distribuzione per l'Italia di SPOTRACK, una giovane e brillante compagnia irlandese guidata da un team che combina una vasta esperienza nella computer vision e nell’entertainment lighting. SPOTRACK ha rivoluzionato lo stage lighting professionale con un innovativo sistema digitale che automatizza il puntamento e il controllo live di qualunque…",
+      "url": "https://www.zalight.it/zalight-distribuisce-spotrack/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/10/Zalight-e-Spotrack_official-presentation-min-1024x576.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13804,
+      "slug": "pinguini-tattici-nucleari-in-tour-con-le-colorado-pxl-bar-16",
+      "date": "2023-09-26T15:11:57",
+      "title": "Pinguini Tattici Nucleari in tour con le Colorado PXL Bar 16",
+      "excerpt": "Una fantastica avventura – il cui successo ha stupito gli stessi artisti – svoltasi nei grandi stadi italiani. Da San Siro all’Olimpico, perchè solo gli stadi potevano contenere lo straripante pubblico dei Pinguini Tattici Nucleari. 11 concerti, tutti sold-out, per un totale di oltre 550.000 biglietti venduti, con uno straordinario epilogo di fronte a 80.000…",
+      "url": "https://www.zalight.it/pinguini-tattici-nucleari-in-tour-con-le-colorado-pxl-bar-16/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/09/IMG_20230909_230313-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13795,
+      "slug": "gli-imagine-dragon-trionfano-al-circo-massimo-con-i-color-strike-m",
+      "date": "2023-09-26T14:57:16",
+      "title": "Gli Imagine Dragons trionfano al Circo Massimo con i Color Strike M",
+      "excerpt": "Gli Imagine Dragons sono una delle band di maggiore successo del filone pop-rock melodico. Miliardi di stream, 75 milioni di copie vendute dei loro 7 album, e schiere di ammiratori in tutto il mondo.L’Italia non fa eccezione, con oltre 70.000 fans accorsi al Circo Massimo per l’unico concerto italiano del lunghissimo ‘Mercury World Tour’ (108…",
+      "url": "https://www.zalight.it/gli-imagine-dragon-trionfano-al-circo-massimo-con-i-color-strike-m/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/09/20230805_212255-1-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13737,
+      "slug": "unlocked-music-festival-2023-i-color-strike-m-per-il-dj-set-di-peggy-gou",
+      "date": "2023-08-25T12:32:57",
+      "title": "Unlocked Music Festival 2023: i Color Strike M per il DJ set di Peggy Gou",
+      "excerpt": "Per la sua decima edizione, l’Unlocked Music Festival ha messo a segno un grande colpo, portando in Italia niete meno che Peggy Gou, la DJ più cool del momento, in testa a tutte le classifiche di elettronica con l’onnipresente “(It Goes Like) Nanana”.Il DJ set di Peggy Gou si è svolto su un palco all’interno…",
+      "url": "https://www.zalight.it/unlocked-music-festival-2023-i-color-strike-m-per-il-dj-set-di-peggy-gou/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/08/Unlocked-Music-Festival-2023_1-min-1024x698.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13680,
+      "slug": "cm-orchestra-feat-mario-biondi-serata-magica-con-i-rogue-outcast",
+      "date": "2023-08-16T14:00:00",
+      "title": "CM Orchestra feat. Mario Biondi: serata magica con i Rogue Outcast",
+      "excerpt": "Una location di aspra e inaspettata bellezza – il Tones Teatro Natura di Crevoladossola, ex cava per l’estrazione del marmo, oggi riconvertita all’arte – ha fatto da suggestivo scenario al concerto della CM Orchestra, un ensemble di 60 musicisti con un repertorio che attraversa varie epoche e stili, per l’occasione arricchita da uno straordinario ospite…",
+      "url": "https://www.zalight.it/cm-orchestra-feat-mario-biondi-serata-magica-con-i-rogue-outcast/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/08/CM-Orchestra-feat.-Mario-Biondi_5-1024x768.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13672,
+      "slug": "liga-allo-stadio-olimpico-ritorno-al-futuro-con-i-color-strike-m",
+      "date": "2023-08-11T15:58:42",
+      "title": "Ligabue allo Stadio Olimpico: ritorno al futuro con i Color Strike M.",
+      "excerpt": "Ligabue live allo Stadio Olimpico: ancora una volta un grande, intenso concerto rock, supportato da un light show di straordinaria efficacia.Un palco ‘ultra-moderno’ se guardiamo le macchine impiegate, ma tradizionalmente ‘rock’ come struttura e impostazione. Come potrebbe essere diversamente, con un rocker come Ligabue e un LD come Jo Campana? Jo, storico LD di Liga,…",
+      "url": "https://www.zalight.it/liga-allo-stadio-olimpico-ritorno-al-futuro-con-i-color-strike-m/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/08/Screenshot_2023-08-09_011922-min-1024x640.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13662,
+      "slug": "amg-international-e-chauvet-professional-al-kappa-futurfestival-2023",
+      "date": "2023-08-09T17:46:33",
+      "title": "AMG International e Chauvet Professional al Kappa FuturFestival 2023",
+      "excerpt": "Kappa FuturFestival 2023: un’edizione da record, con i Rogue Outcast 2 Beam Il Kappa FuturFestival è uno dei festival di musica elettronica più grandi e spettacolari al mondo, e sicuramente quello più importante d’Italia. Una posizione conquistata anno dopo anno grazie alla partecipazione dei più famosi DJ del panorama techno house internazionale, ma grazie anche alla location…",
+      "url": "https://www.zalight.it/amg-international-e-chauvet-professional-al-kappa-futurfestival-2023/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/08/RT_6826Matteo-Ortili-min-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13602,
+      "slug": "i-pooh-in-tour-con-i-color-strike-m",
+      "date": "2023-08-02T16:55:25",
+      "title": "I Pooh in tour con i Color Strike M",
+      "excerpt": "I Pooh si sono esibiti in due spettacolari concerti (entrambi sold-out) il 6 Luglio a San Siro e il 15 Luglio allo Stadio Olimpico; due date del loro nuovo tour ‘Amici per sempre – Stadi 2023’, che si concluderà il 19 Ottobre a Bari. Abbiamo chiesto a Francesco De Cave, Lighting Designer del tour, di…",
+      "url": "https://www.zalight.it/i-pooh-in-tour-con-i-color-strike-m/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/08/Screenshot_2023-07-27_0945313.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13595,
+      "slug": "maverick-mk3-wash-in-tour-con-venditti-de-gregori",
+      "date": "2023-07-27T10:43:50",
+      "title": "Maverick MK3 Wash in tour con Venditti & De Gregori",
+      "excerpt": "Dopo l’enorme successo della tournée 2022, partita il 18 Giugno dallo Stadio Olimpico di Roma e continuata con 55 date tutte sold-out, De Gregori e Venditti si sono esibiti lo scorso 17 Luglio a Firenze, nella splendida Piazza Santissima Annunziata, in occasione del Musart Festival.Ringraziamo Massimo Tomasino, ‘storico’ LD dei due artisti, per averci descritto…",
+      "url": "https://www.zalight.it/maverick-mk3-wash-in-tour-con-venditti-de-gregori/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/07/Musart-Festival-DE-GREGORI-VENDITTI-Ph-Luca-Brunetti-8-min-min-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13580,
+      "slug": "25-anni-25-hypercars-la-motor-valley-celebra-il-mito-pagani",
+      "date": "2023-07-10T17:39:31",
+      "title": "25 anni - 25 Hypercars: La ‘Motor Valley’ celebra il mito Pagani con Innled T4",
+      "excerpt": "Dal 16 al 18 Giugno si è svolto a Modena, ‘25 anni - 25 Hypercars’, l’evento illuminato grazie all'installazione dei sistemi Innled speciale con cui Pagani Automobili ha festeggiato i suoi primi 25 anni. Le 25 ‘dream cars’ allineate al centro di Piazza Roma, sullo straordinario sfondo di Palazzo Ducale, hanno ricevuto l’omaggio di una…",
+      "url": "https://www.zalight.it/25-anni-25-hypercars-la-motor-valley-celebra-il-mito-pagani/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/07/WhatsApp-Image-2023-06-18-at-12.49.37-1024x682.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13559,
+      "slug": "innled-t4-illumina-i-60-anni-di-lamborghini",
+      "date": "2023-07-06T09:20:31",
+      "title": "Innled T4 illumina i 60 anni di Lamborghini",
+      "excerpt": "La \"Casa del Toro\" ha festeggiato il suo 60° anniversario con una serie di appuntamenti esclusivi dedicati alla storia del marchio. Per l'occasione, Lamborghini Bergamo ha celebrato questo importante traguardo con un evento d'eccezione organizzato nella suggestiva cornice del Vittoriale degli Italiani a Gardone Riviera (Brescia), a picco sul Lago di Garda. Durante la serata,…",
+      "url": "https://www.zalight.it/innled-t4-illumina-i-60-anni-di-lamborghini/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/07/Lamborghin_Bergamo_Innled_T4_1-1024x682.jpeg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 13444,
+      "slug": "elodie-al-mediolanum-forum-di-assago-con-color-strike-m",
+      "date": "2023-06-20T16:09:07",
+      "title": "Elodie al Mediolanum Forum di Assago con Color Strike M",
+      "excerpt": "Il 12 maggio Elodie si è esibita sul palco del Forum Mediolanum di Assago in un atteso concerto subito sold-out. Più che un concerto, si è trattato di un evento spettacolare di livello superiore. Uno show che dal punto di vista tecnico e artistico ha pochi paragoni in Italia. Una band di 12 elementi, 15 tra ballerine e…",
+      "url": "https://www.zalight.it/elodie-al-mediolanum-forum-di-assago-con-color-strike-m/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/06/Elodie_Mediolanum_Forum_Chauvet_Strike_M_3_-min-1024x576.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 12947,
+      "slug": "color-strike-m-in-tour-con-sfera-ebbasta-intervista-al-ld-giorgio-josh-geromin",
+      "date": "2023-05-15T11:30:29",
+      "title": "Color Strike M in tour con Sfera Ebbasta; intervista al LD, Giorgio ‘Josh’ Geromin.",
+      "excerpt": "Sfera Ebbasta – il re dei rapper italiani, da due anni il più scaricato sulla rete – si è esibito lo scorso 27 Aprile in concerto all’Arena di Verona, tempio del melodramma ma anche tappa obbligata per i tour dei maggiori artisti pop italiani.Non è bastato un solo concerto per soddisfare l’esercito dei fans –…",
+      "url": "https://www.zalight.it/color-strike-m-in-tour-con-sfera-ebbasta-intervista-al-ld-giorgio-josh-geromin/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/05/SFERA_EBBASTA_Concerto_Verona_03-1024x683.webp",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 12810,
+      "slug": "60-clone-al-live-you-play-mir2023-intervista-a-massimo-tomasino",
+      "date": "2023-04-24T11:42:18",
+      "title": "60 Clone al Live You Play / MIR2023. Intervista a Massimo Tomasino",
+      "excerpt": "60 Clone di My Method, gli eleganti proiettori dalla calda luce al tungsteno e dall’inedita estetica, sono stati installati sul palco Live You Play del recente MIR2023.Abbiamo chiesto a Massimo Tomasino – LD del main stage Live You Play – perchè li ha scelti e come li ha utilizzati. “La prima cosa che mi è…",
+      "url": "https://www.zalight.it/60-clone-al-live-you-play-mir2023-intervista-a-massimo-tomasino/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/04/TOMASINO-1024x682.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 12622,
+      "slug": "squadra-vincente-non-si-cambia-300-clone-a-the-voice-senior-2023",
+      "date": "2023-03-10T17:19:45",
+      "title": "‘Squadra vincente non si cambia’: 300 Clone a The Voice Senior 2023",
+      "excerpt": "‘The Voice Senior 2023’, il brillante talent show in onda in prima serata su RAI 1, ha scelto per il secondo anno consecutivo i proiettori Clone, distribuiti in esclusiva da Zalight. Ben 300 proiettori Clone di My Method hanno dato vita ad un'atmosfera incredibile per questa straordinaria edizione. Caratterizzati da una calda ed avvolgente luce…",
+      "url": "https://www.zalight.it/squadra-vincente-non-si-cambia-300-clone-a-the-voice-senior-2023/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/03/The-Voice-Senior-2023-1024x513.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 12299,
+      "slug": "fuori-sanremo-accende-i-nuovi-rogue-outcast-1-beamwash-di-chauvet",
+      "date": "2023-02-15T11:59:57",
+      "title": "‘Fuori Sanremo’ accende i nuovi Rogue Outcast 1 BeamWash di Chauvet Professional.",
+      "excerpt": "Radio Italia si è trasferita a Sanremo in occasione della 73a edizione del Festival, impegnata in una diretta – in contemporanea radio e video – trasmessa dallo studio ‘Fuori Sanremo Intesa San Paolo’, allestito negli spazi del Grand Hotel Londra. Uno studio realizzato con una infrastruttura illuminotecnica molto performante ma anche molto flessibile, viste le…",
+      "url": "https://www.zalight.it/fuori-sanremo-accende-i-nuovi-rogue-outcast-1-beamwash-di-chauvet/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/02/IMG_4-min.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 12138,
+      "slug": "zalight-ottiene-la-distribuzione-esclusiva-di-chauvet-professional-in-italia",
+      "date": "2023-02-02T12:35:43",
+      "title": "Chauvet affida la distribuzione esclusiva di Chauvet Professional per il mercato italiano a Zalight.",
+      "excerpt": "La location per l’annncio ufficiale di questo importante accordo non poteva essere migliore: la collaborazione tra Chauvet Professional e Zalight, infatti, inizia operativamente all’ISE 2023 di Barcellona; l’evento mondiale centrale per tutti i professionisti, vera piattaforma per il lancio delle migliori innovazioni AV e Lighting; un’occasione benaugurale per Zalight, sempre più un hub delle più…",
+      "url": "https://www.zalight.it/zalight-ottiene-la-distribuzione-esclusiva-di-chauvet-professional-in-italia/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2023/02/IMG-20230131-WA0006-1024x576.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18603,
+      "slug": "rollstar-e-jorgos-ad-amici-intervista-al-direttore-della-fotografia-marco-vignanelli",
+      "date": "2023-01-10T14:51:00",
+      "title": "Rollstar e Jorgos ad ‘Amici’. Intervista al Direttore della Fotografia Marco Vignanelli.",
+      "excerpt": "Ciao Marco. Come si dice, la tua fama ti ha preceduto: Direttore della Fotografia per l’ottavo anno consecutivo di ‘Amici’, il talent show più famoso della televisione, la corazzata di Canale 5. Un uso delle luci, il tuo, che ha reso anno dopo anno il serale di ‘Amici’ non più una semplice appendice del pomeridiano…",
+      "url": "https://www.zalight.it/rollstar-e-jorgos-ad-amici-intervista-al-direttore-della-fotografia-marco-vignanelli/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/sfondo.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 11696,
+      "slug": "zalight-e-cosmolight-insieme-al-microsalon-2022",
+      "date": "2022-12-19T09:49:24",
+      "title": "Zalight e Cosmolight insieme al Microsalon 2022",
+      "excerpt": "Zalight, storico espositore del grande evento italiano sulle tecnologie cinematografiche e televisive, partecipa alla nona edizione del Microsalon in partnership con Cosmolight. Brand italiano apprezzato in tutto il mondo per i suoi sistemi di illuminazione professionale, innovativi ed affidabili. Le due aziende saranno fianco a fianco in un open space (stand 9 e 10) nel…",
+      "url": "https://www.zalight.it/zalight-e-cosmolight-insieme-al-microsalon-2022/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2022/12/Microsalon-2022-banner-1024x432.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 11119,
+      "slug": "zalight-distributore-esclusivo-dei-prodotti-smoke-factory",
+      "date": "2022-06-20T10:58:52",
+      "title": "Zalight distributore esclusivo dei prodotti Smoke Factory",
+      "excerpt": "Zalight, azienda di riferimento nel settore dell'illuminazione e delle tecnologie per lo spettacolo, annuncia con orgoglio di aver recentemente concluso un importante e prestigioso accordo di partnership con Smoke Factory, il noto e apprezzato produttore tedesco è da anni un punto di riferimento globale nello sviluppo di Fog e Haze machines di livello strettamente professionali,…",
+      "url": "https://www.zalight.it/zalight-distributore-esclusivo-dei-prodotti-smoke-factory/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2022/06/SMOKE-FACTORY_MACCHINE_DEL_FUMO_700x700.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18610,
+      "slug": "la-soluzione-led-hi-tech-di-zalight-per-stardust-house-di-milano",
+      "date": "2022-06-10T15:34:00",
+      "title": "La soluzione LED Hi-Tech di Zalight per Stardust House di Milano",
+      "excerpt": "Stardust è una nota media agency che propone tramite la realizzazione di contenuti creativi di alta qualità e format originali massicciamente veicolati sulle principali piattaforme social, un nuovo concetto di promozione del brand denominato influencer marketing.In questa attività di connessione tra i brand commerciali e la vastissima audience della rete, Stardust si avvale dell’inarrestabile creatività…",
+      "url": "https://www.zalight.it/la-soluzione-led-hi-tech-di-zalight-per-stardust-house-di-milano/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/stardust-house-led-wall-1024x574-1.webp",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18615,
+      "slug": "dazn-installa-artemio-e-infinity-100-nei-suoi-studi",
+      "date": "2022-06-05T15:42:00",
+      "title": "DAZN installa Artemio e Infinity 100 nei suoi studi.",
+      "excerpt": "DAZN, la piattaforma digitale leader nello streaming del campionato di calcio di Serie A, ha recentemente inaugurato il suo innovativo studio di Milano. In particolare, si tratta di uno spazio fisico di ultima generazione, appositamente concepito per ospitare l'analisi tattica, i dibattiti e gli approfondimenti del dopo-partita. Lo studio è stato battezzato The Square (La…",
+      "url": "https://www.zalight.it/dazn-installa-artemio-e-infinity-100-nei-suoi-studi/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/DAZN_3-1024x576.webp",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 11095,
+      "slug": "kalush-orchestra-stefania-trionfa",
+      "date": "2022-05-25T14:59:46",
+      "title": "ESC 2022: trionfo per Kalush Orchestra e per la tecnologia Zalight.",
+      "excerpt": "La Kalush Orchestra ha vinto l’Eurovision Song Contest 2022 con ‘Stefania’. Questo brano è un intenso pezzo pop. La canzone fonde sapientemente una ritmica ipnotica, strumenti tradizionali, rap moderno e vocalità etnica. Dedicato alla madre del cantante, il testo supera i confini familiari ed abbraccia un intero popolo. L’Eurovision è diventato uno straordinario mix multietnico.…",
+      "url": "https://www.zalight.it/kalush-orchestra-stefania-trionfa/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2022/05/KALUSH_3-1024x683.jpg",
+      "categories": [
+        "progetti"
+      ]
+    },
+    {
+      "id": 11092,
+      "slug": "maneskin-un-sogno-italiano-che-si-avvera",
+      "date": "2022-05-23T09:04:56",
+      "title": "ESC 2022: l’Italia protagonista con Maneskin e Rollstar.",
+      "excerpt": "Freschi dell’affermazione al Festival di Sanremo, appena proclamati vincitori dell’Eurovision Song Contest 2021, Damiano – frontman dei Maneskin – aveva scandito: “il Rock’n’Roll non morirà mai!”. Dichiarazione profetica della band italiana, che in pochi mesi ha trionfato agli MTV Europe Music Awards come migliori artisti rock, e infiammato il pubblico americano aprendo il concerto dei…",
+      "url": "https://www.zalight.it/maneskin-un-sogno-italiano-che-si-avvera/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2022/05/Maneskin_img2-1024x531.png",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18567,
+      "slug": "rollstar-mette-in-moto-leurovision-song-contest-2022",
+      "date": "2022-05-21T12:52:00",
+      "title": "Rollstar mette in moto l’Eurovision Song Contest 2022",
+      "excerpt": "L’esibizione con cui Laura Pausini ha aperto la serata finale dell’Eurovision Song Contest 2022, è stato uno dei momenti più spettacolari ed emozionanti dell’intero evento. Una performance esaltata da un allestimento illuminotecnico che ha unito brillantemente innovazione e creatività. Al centro del setup, la vera novità tecnologica di questa edizione: Rollstar. La macchina scenica che…",
+      "url": "https://www.zalight.it/rollstar-mette-in-moto-leurovision-song-contest-2022/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/RollStar-mette-in-moto-lEurovision-2022-SFONDO-1024x613.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18576,
+      "slug": "rollstar-alleurovision-song-contest-2022",
+      "date": "2022-05-20T15:10:00",
+      "title": "Rollstar e Jorgos all’Eurovision Song Contest 2022",
+      "excerpt": "L’Eurovision Song Contest è lo show televisivo più atteso dell’anno.Una manifestazione che dal 1956 ha coinvolto oltre 50 paesi diventando un simbolo di pace e di fratellanza all’insegna della musica.Da alcuni anni l’Eurovision Song Contest è lo spettacolo televisivo più popolare al mondo. Trasmesso in diretta in tutti e cinque i continenti, con un’audience di…",
+      "url": "https://www.zalight.it/rollstar-alleurovision-song-contest-2022/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/Rollstar-illuminazione-Eurovision-SFONDO-1024x683.jpg",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18621,
+      "slug": "mymethod-clone-a-x-factor-2021",
+      "date": "2022-02-08T16:02:00",
+      "title": "MyMethod CLONE a X-Factor 2021",
+      "excerpt": "X-Factor, storico talent show televisivo giunto con grande seguito alla sua quindicesima alla sua 15a edizione, ha scelto il nuovo Clone di MyMethod per le due serate clou della stagione 2021: La semifinale al Teatro Repower di Assago (60 unità disposte geometricamente dietro gli artisti, e pixel-mapped per una perfetta integrazione con le luci dello…",
+      "url": "https://www.zalight.it/mymethod-clone-a-x-factor-2021/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/1-493.jpg-800x1000-1-768x960-1.webp",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 18627,
+      "slug": "240-clone-utilizzati-a-the-voice-of-italy-senior",
+      "date": "2021-12-16T16:09:00",
+      "title": "240 \"Clone\" utilizzati a The Voice of Italy Senior",
+      "excerpt": "The Voice Senior, il fortunato e amatissimo talent show di Rai1 giunto con grande successo alla sua seconda edizione. In onda per 8 puntate da venerdì 26 Novembre 2021, conquistando il pubblico di prima serata.Una trasmissione di grande successo, caratterizzata quest’anno dall’utilizzo on stage di un proiettore dallo straordinario impatto visivo: Clone. Clone è allo…",
+      "url": "https://www.zalight.it/240-clone-utilizzati-a-the-voice-of-italy-senior/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2026/07/06-1024x576.webp",
+      "categories": [
+        "news"
+      ]
+    },
+    {
+      "id": 9082,
+      "slug": "luca-di-donato-si-unisce-al-team-zalight",
+      "date": "2021-02-26T16:32:29",
+      "title": "Luca Di Donato si unisce al Team Zalight",
+      "excerpt": "Zalight accoglie nel proprio Team Luca Di Donato,\napprezzato e riconosciuto professionista con 25 anni di esperienza nel mercato italiano dell’Entertainment ed Architetturale.",
+      "url": "https://www.zalight.it/luca-di-donato-si-unisce-al-team-zalight/",
+      "image": "https://www.zalight.it/luce/wp-content/uploads/2021/02/INSTAGRAM-1080x1080-01-1024x1024.jpg",
+      "categories": [
+        "news"
+      ]
+    }
+  ]
+}

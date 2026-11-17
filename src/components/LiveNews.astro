@@ -1,0 +1,126 @@
+---
+/**
+ * Griglia case study/news ZAlight.
+ * - Build-time: snapshot da src/data/zalight/news.json (SEO, zero JS necessario).
+ * - Runtime: un piccolo script interroga la REST API di zalight.it e inserisce in testa
+ *   gli articoli pubblicati dopo l'ultima build, così la sezione è sempre aggiornata.
+ */
+import NewsCard from './NewsCard.astro';
+import { caseStudies, meta } from '../lib/catalog';
+import { zalight } from '../config/site';
+
+interface Props {
+  limit?: number;
+  featuredFirst?: boolean;
+  showProducts?: boolean;
+  class?: string;
+}
+const { limit = 6, featuredFirst = false, showProducts = true, class: className = '' } = Astro.props;
+const items = caseStudies(limit);
+const knownIds = items.map((p) => p.id);
+---
+
+<div
+  class:list={['grid gap-6 sm:grid-cols-2 lg:grid-cols-3', className]}
+  data-live-news
+  data-api={zalight.api}
+  data-known={knownIds.join(',')}
+  data-limit={limit}
+  data-synced={meta.syncedAt}
+>
+  {items.map((post, i) => <NewsCard post={post} featured={featuredFirst && i === 0} showProducts={showProducts} priority={i === 0} />)}
+</div>
+<p class="mt-4 text-xs text-ink-300" data-live-status>
+  Fonte: <a href={`${zalight.url}/news/`} target="_blank" rel="noopener" class="hover:text-amber-400">zalight.it/news</a>
+</p>
+
+<script>
+  interface WpPost {
+    id: number;
+    date: string;
+    link: string;
+    title: { rendered: string };
+    excerpt: { rendered: string };
+    _embedded?: { 'wp:featuredmedia'?: { source_url?: string; media_details?: { sizes?: Record<string, { source_url: string }> } }[] };
+  }
+
+  const decodeHtml = (html: string) => {
+    const el = document.createElement('textarea');
+    el.innerHTML = html;
+    return el.value;
+  };
+  const strip = (html: string) => decodeHtml(html.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+  const fmt = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  function card(p: WpPost): HTMLElement {
+    const media = p._embedded?.['wp:featuredmedia']?.[0];
+    const img = media?.media_details?.sizes?.large?.source_url || media?.source_url || '';
+    const title = strip(p.title.rendered);
+    const excerpt = strip(p.excerpt.rendered).slice(0, 220);
+    const el = document.createElement('article');
+    el.className = 'card card-hover group relative flex flex-col overflow-hidden animate-fade-up';
+    el.dataset.postId = String(p.id);
+    el.innerHTML = `
+      <div class="relative aspect-[16/10] overflow-hidden bg-ink-700">
+        ${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />` : '<div class="grid-glow h-full w-full"></div>'}
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent"></div>
+        <span class="absolute top-3 left-3 rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold tracking-wider text-ink-950 uppercase">Nuovo</span>
+      </div>
+      <div class="flex flex-1 flex-col gap-3 p-5">
+        <p class="flex items-center gap-2 text-xs text-ink-300"><time datetime="${p.date}">${fmt.format(new Date(p.date))}</time><span aria-hidden="true">·</span><span class="text-amber-400">Case study ZAlight</span></p>
+        <h3 class="font-display text-lg font-semibold leading-snug text-ink-50"><a href="${p.link}" target="_blank" rel="noopener" class="after:absolute after:inset-0 after:content-['']"></a></h3>
+        <p class="line-clamp-3 text-sm leading-relaxed text-ink-300"></p>
+      </div>`;
+    el.querySelector('h3 a')!.textContent = title;
+    el.querySelector('p.line-clamp-3')!.textContent = excerpt;
+    return el;
+  }
+
+  async function refresh(grid: HTMLElement) {
+    const api = grid.dataset.api!;
+    const known = new Set((grid.dataset.known ?? '').split(',').filter(Boolean).map(Number));
+    const limit = Number(grid.dataset.limit ?? 6);
+    const status = grid.parentElement?.querySelector<HTMLElement>('[data-live-status]');
+    try {
+      const url = `${api}/posts?per_page=${Math.min(limit, 20)}&_embed=wp:featuredmedia&_fields=id,date,link,title,excerpt,_links,_embedded`;
+      const res = await fetch(url, { headers: { Accept: 'application/json' } });
+      if (!res.ok) return;
+      const posts = (await res.json()) as WpPost[];
+      const fresh = posts.filter((p) => !known.has(p.id)).reverse();
+      for (const p of fresh) {
+        grid.prepend(card(p));
+      }
+      // Mantieni il numero di card entro il limite rimuovendo le più vecchie
+      const cards = grid.querySelectorAll<HTMLElement>('[data-post-id]');
+      for (let i = limit; i < cards.length; i++) cards[i].remove();
+      if (status) {
+        const span = document.createElement('span');
+        span.className = 'ml-2 text-ink-500';
+        span.textContent = fresh.length
+          ? `· ${fresh.length} nuov${fresh.length === 1 ? 'o articolo' : 'i articoli'} caricat${fresh.length === 1 ? 'o' : 'i'} ora`
+          : '· aggiornato in tempo reale';
+        status.appendChild(span);
+      }
+    } catch {
+      /* offline o API non raggiungibile: resta lo snapshot statico */
+    }
+  }
+
+  const grids = document.querySelectorAll<HTMLElement>('[data-live-news]');
+  if (grids.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            io.unobserve(e.target);
+            refresh(e.target as HTMLElement);
+          }
+        }
+      },
+      { rootMargin: '400px' },
+    );
+    grids.forEach((g) => io.observe(g));
+  } else {
+    grids.forEach((g) => refresh(g));
+  }
+</script>

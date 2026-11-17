@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout title="Cookie policy" description={`Informativa sull’uso dei cookie del sito ${site.url}.`} noindex>
+  <section class="container-x max-w-3xl pt-8 pb-20 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Cookie policy' }]} />
+    <h1 class="heading-lg mt-6">Cookie policy</h1>
+    <div class="prose-custom mt-8 text-sm">
+      <p>Questo sito <strong>non utilizza cookie di profilazione</strong> né cookie analitici di terze parti. Per questo motivo non viene mostrato alcun banner di consenso.</p>
+      <h2 class="heading-md mt-8 text-xl">Cookie tecnici</h2>
+      <p>Il sito è generato staticamente e non imposta cookie propri. L’eventuale piattaforma di hosting può utilizzare cookie strettamente necessari al funzionamento o alla sicurezza (es. protezione anti-bot), per i quali non è richiesto il consenso.</p>
+      <h2 class="heading-md mt-8 text-xl">Contenuti incorporati</h2>
+      <p>I video YouTube presenti nelle schede prodotto vengono caricati esclusivamente dopo un tuo click, tramite il dominio <em>youtube-nocookie.com</em>. Solo in quel momento YouTube (Google) potrà impostare propri cookie secondo la sua informativa. Le immagini di catalogo sono servite da questo sito dopo ottimizzazione; gli aggiornamenti news vengono richiesti all’API pubblica di zalight.it senza invio di cookie.</p>
+      <h2 class="heading-md mt-8 text-xl">Come gestire i cookie</h2>
+      <p>Puoi bloccare o eliminare i cookie dalle impostazioni del tuo browser. Per maggiori informazioni consulta la nostra <a href="/privacy-policy">privacy policy</a> o scrivi a {site.email}.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RemoteImage from '../../components/RemoteImage.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { products, getBrand, getTipologia, getSettore, relatedProducts, exclusiveBrandSlugs } from '../../lib/catalog';
+import { site } from '../../config/site';
+
+export function getStaticPaths() {
+  return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
+}
+
+const { product } = Astro.props;
+const brand = getBrand(product.brand);
+const tipologiaList = product.tipologie.map(getTipologia).filter((t): t is NonNullable<typeof t> => Boolean(t));
+const settoriList = product.settori.map(getSettore).filter((s): s is NonNullable<typeof s> => Boolean(s));
+const related = relatedProducts(product, 4);
+const specs = product.shortDescription
+  .split(';')
+  .map((s) => s.trim())
+  .filter(Boolean);
+const images = [product.image, ...product.gallery].filter((u): u is string => Boolean(u));
+const videoId = product.video?.split('/embed/')[1]?.split(/[?&]/)[0];
+
+const description = `${product.name} ${brand ? `di ${brand.name}` : ''}: ${product.shortDescription || product.description[0]?.slice(0, 140) || 'scheda prodotto'}. Consulenza, demo e preventivo in Emilia-Romagna e Marche con ARTCONTENT, agenzia ZAlight.`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.name,
+  image: images,
+  description: product.description.join(' ') || product.shortDescription,
+  brand: brand ? { '@type': 'Brand', name: brand.name } : undefined,
+  category: tipologiaList.map((t) => t.name).join(', '),
+  url: new URL(`/prodotti/${product.slug}`, site.url).href,
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'EUR',
+    seller: { '@id': `${site.url}/#organization` },
+    areaServed: ['Emilia-Romagna', 'Marche'],
+  },
+};
+---
+
+<BaseLayout title={`${product.name}${brand ? ` – ${brand.name}` : ''}`} description={description} image={product.image ?? undefined} type="product" schema={schema}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs
+      items={[
+        { label: 'Prodotti', href: '/prodotti' },
+        ...(brand ? [{ label: brand.name, href: `/vendor/${brand.slug}` }] : []),
+        { label: product.name },
+      ]}
+    />
+  </section>
+
+  <section class="container-x grid gap-10 py-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+    <!-- Galleria -->
+    <div class="lg:sticky lg:top-24 lg:self-start">
+      <div class="card overflow-hidden bg-white p-6 sm:p-10" data-gallery-main>
+        {
+          images.map((src, i) => (
+            <div class:list={['aspect-square', i > 0 && 'hidden']} data-slide={i}>
+              <RemoteImage src={src} alt={i === 0 ? product.imageAlt : `${product.name} – vista ${i + 1}`} width={900} aspect={1} fit="contain" priority={i === 0} sizes="(min-width:1024px) 50vw, 100vw" class="h-full w-full object-contain" />
+            </div>
+          ))
+        }
+      </div>
+      {
+        images.length > 1 && (
+          <div class="mt-3 grid grid-cols-5 gap-2" role="tablist" aria-label="Immagini prodotto">
+            {images.map((src, i) => (
+              <button type="button" role="tab" aria-selected={i === 0 ? 'true' : 'false'} data-thumb={i} class="aspect-square overflow-hidden rounded-xl border-2 border-transparent bg-white p-1.5 transition aria-selected:border-amber-400">
+                <RemoteImage src={src} alt="" width={160} aspect={1} fit="contain" class="h-full w-full object-contain" sizes="80px" />
+              </button>
+            ))}
+          </div>
+        )
+      }
+    </div>
+
+    <!-- Info -->
+    <div>
+      <div class="flex flex-wrap items-center gap-2">
+        {brand && (
+          <a href={`/vendor/${brand.slug}`} class="chip hover:border-amber-400/60">
+            {brand.name}
+          </a>
+        )}
+        {brand && exclusiveBrandSlugs.includes(brand.slug) && <span class="chip chip-active">Distribuzione esclusiva Italia</span>}
+        {product.isNew && <span class="rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold tracking-wider text-ink-950 uppercase">Novità</span>}
+      </div>
+      <h1 class="heading-lg mt-4">{product.name}</h1>
+      {tipologiaList.length > 0 && <p class="mt-2 text-sm text-ink-300">{tipologiaList.map((t) => t.name).join(' · ')}</p>}
+
+      {
+        specs.length > 0 && (
+          <ul class="mt-6 grid gap-2 sm:grid-cols-2">
+            {specs.map((s) => (
+              <li class="flex items-start gap-2 rounded-xl border border-white/6 bg-ink-800/60 px-3.5 py-2.5 text-sm text-ink-100">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="m5 12 5 5L20 7" />
+                </svg>
+                {s}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        product.description.length > 0 && (
+          <div class="prose-custom mt-8">
+            {product.description.map((p) => (
+              <p set:html={p.replace(/\n/g, '<br />')} />
+            ))}
+          </div>
+        )
+      }
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <a href="#richiesta" class="btn-primary">Richiedi prezzo e disponibilità</a>
+        {product.datasheet && (
+          <a href={product.datasheet} target="_blank" rel="noopener" class="btn-secondary">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            Scheda tecnica (PDF)
+          </a>
+        )}
+        <a href={product.zalightUrl} target="_blank" rel="noopener" class="btn-ghost">Vedi su zalight.it ↗</a>
+      </div>
+
+      <dl class="mt-10 grid gap-5 border-t border-white/5 pt-8 sm:grid-cols-2">
+        {
+          settoriList.length > 0 && (
+            <div>
+              <dt class="text-xs font-semibold tracking-[0.14em] text-ink-300 uppercase">Settori consigliati</dt>
+              <dd class="mt-2 flex flex-wrap gap-1.5">
+                {settoriList.map((s) => (
+                  <a href={`/settori/${s.slug}`} class="chip hover:border-amber-400/60">
+                    {s.name}
+                  </a>
+                ))}
+              </dd>
+            </div>
+          )
+        }
+        <div>
+          <dt class="text-xs font-semibold tracking-[0.14em] text-ink-300 uppercase">Servizi inclusi</dt>
+          <dd class="mt-2 text-sm leading-relaxed text-ink-200">Demo on-site in Emilia-Romagna e Marche, supporto alla configurazione, garanzia e assistenza ufficiale ZAlight.</dd>
+        </div>
+      </dl>
+
+      {
+        product.relatedNews.length > 0 && (
+          <div class="mt-8">
+            <h2 class="text-xs font-semibold tracking-[0.14em] text-ink-300 uppercase">Visto in scena</h2>
+            <ul class="mt-3 space-y-2">
+              {product.relatedNews.map((n) => (
+                <li>
+                  <a href={n.url} target="_blank" rel="noopener" class="flex items-start gap-2 text-sm text-ink-100 hover:text-amber-400">
+                    <span aria-hidden="true" class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                    {n.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    videoId && (
+      <section class="container-x pb-10">
+        <h2 class="heading-md">Video</h2>
+        <lite-yt class="card mt-5 block aspect-video overflow-hidden" data-video-id={videoId} data-title={product.name}>
+          <button type="button" class="group relative flex h-full w-full items-center justify-center bg-ink-800" aria-label={`Riproduci video ${product.name}`}>
+            <img src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`} alt="" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover opacity-70 transition group-hover:opacity-90" />
+            <span class="relative inline-flex h-16 w-16 items-center justify-center rounded-full bg-amber-500 text-ink-950 shadow-glow-amber transition group-hover:scale-105">
+              <svg class="ml-1 h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+          </button>
+        </lite-yt>
+        <p class="mt-2 text-xs text-ink-300">Il video viene caricato da YouTube solo dopo il click.</p>
+      </section>
+    )
+  }
+
+  <section id="richiesta" class="container-x section pt-6">
+    <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p class="eyebrow">Richiesta rapida</p>
+        <h2 class="heading-lg mt-3">Prezzo, disponibilità o demo di {product.name}</h2>
+        <p class="lead mt-4">Rispondiamo con quotazione, tempi di consegna e — se vuoi — una data per vederlo acceso dal vivo.</p>
+      </div>
+      <ContactForm subject={`${product.name}${brand ? ` (${brand.name})` : ''}`} />
+    </div>
+  </section>
+
+  {
+    related.length > 0 && (
+      <section class="container-x pb-10">
+        <h2 class="heading-md">Prodotti correlati</h2>
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {related.map((p) => (
+            <ProductCard product={p} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<script>
+  // Galleria: switch slide via thumbnail
+  const main = document.querySelector<HTMLElement>('[data-gallery-main]');
+  if (main) {
+    const slides = main.querySelectorAll<HTMLElement>('[data-slide]');
+    const thumbs = document.querySelectorAll<HTMLButtonElement>('[data-thumb]');
+    thumbs.forEach((t) =>
+      t.addEventListener('click', () => {
+        const i = t.dataset.thumb;
+        slides.forEach((s) => s.classList.toggle('hidden', s.dataset.slide !== i));
+        thumbs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+      }),
+    );
+  }
+
+  // Video YouTube caricato on-demand (privacy + performance)
+  document.querySelectorAll<HTMLElement>('lite-yt').forEach((el) => {
+    el.querySelector('button')?.addEventListener('click', () => {
+      const id = el.dataset.videoId;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = el.dataset.title ?? 'Video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.className = 'h-full w-full';
+      el.replaceChildren(iframe);
+    });
+  });
+</script>

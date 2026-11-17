@@ -1,0 +1,47 @@
+---
+import RemoteImage from './RemoteImage.astro';
+import { vendorNews, getBrand, formatDate } from '../lib/catalog';
+
+interface Props {
+  brand?: string;
+  limit?: number;
+}
+const { brand, limit = 9 } = Astro.props;
+const items = (brand ? vendorNews.filter((n) => n.brand === brand) : vendorNews).slice(0, limit);
+---
+
+{
+  items.length > 0 ? (
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((n) => {
+        const b = getBrand(n.brand);
+        return (
+          <li class="card card-hover relative flex gap-4 p-4">
+            <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1.5">
+              {b?.logo ? <RemoteImage src={b.logo} alt={b.name} width={112} aspect={1} fit="contain" class="h-full w-full object-contain" sizes="56px" /> : <span class="text-xs font-bold text-ink-900">{b?.name}</span>}
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] text-ink-300">
+                <span class="font-semibold text-amber-400">{b?.name ?? n.brand}</span>
+                {n.date && (
+                  <>
+                    {' · '}
+                    <time datetime={n.date}>{formatDate(n.date)}</time>
+                  </>
+                )}
+              </p>
+              <h3 class="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-ink-50">
+                <a href={n.url} target="_blank" rel="noopener" class="after:absolute after:inset-0 after:content-['']">
+                  {n.title}
+                </a>
+              </h3>
+              {n.excerpt && <p class="mt-1 line-clamp-2 text-xs leading-relaxed text-ink-300">{n.excerpt}</p>}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  ) : (
+    <p class="text-sm text-ink-300">Nessuna news disponibile al momento dal sito del produttore.</p>
+  )
+}

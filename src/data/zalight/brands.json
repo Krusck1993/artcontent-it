@@ -1,0 +1,371 @@
+[
+  {
+    "id": 151,
+    "name": "Chauvet Professional",
+    "slug": "chauvet",
+    "productCount": 131,
+    "zalightUrl": "https://www.zalight.it/brand/chauvet/",
+    "website": "https://www.chauvetprofessional.com/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/chauvet.jpg",
+    "description": [
+      "Chauvet Professional è un marchio globale con sedi e stabilimenti in USA e nei principali Paesi europei; la compagnia, fondata nel 1990, è universalmente conosciuta e apprezzata per il suo vasto catalogo di prodotti di altissima qualità, e per la capacità di rispondere rapidamente alle esigenze del mercato con soluzioni tecnologiche sempre innovative.",
+      "Il catalogo Chauvet Professional comprende una vasta selezione di prodotti, capaci di offrire infinite possibilità ai Lighting Designers e a tutti i professionisti dell’illuminazione, sia nel settore spettacolo che nel broadcast, nei progetti e nelle installazioni.",
+      "Ogni linea di prodotti Chauvet Professional è progettata e sviluppata per soddisfare le differenti esigenze dei clienti, offrendo loro un forte vantaggio competitivo in termini di valore, innovazione e prestazioni."
+    ],
+    "newsFeed": "https://www.chauvetprofessional.com/feed/"
+  },
+  {
+    "id": 222,
+    "name": "Chauvet Dj",
+    "slug": "chauvet-dj",
+    "productCount": 129,
+    "zalightUrl": "https://www.zalight.it/brand/chauvet-dj/",
+    "website": "https://www.chauvetdj.com/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2024/08/CHAUVET-DJ-1.jpg",
+    "description": [
+      "Chauvet DJ – brand del gruppo americano Chauvet, uno dei più grandi produttori mondiali nel lighting professionale – offre un vasto catalogo di proiettori, controller e accessori per l’intrattenimento, progettati sia per un utilizzo ‘in movimento’ che per installazioni permanenti.\nI prodotti Chauvet DJ offrono agli utenti tutti i vantaggi di un brand leader di mercato: qualità e affidabilità testate in migliaia di esemplari, prestazioni ai massimi livelli, e una capacità di innovazione che non ha eguali nel suo settore."
+    ],
+    "newsFeed": "https://www.chauvetdj.com/feed/"
+  },
+  {
+    "id": 64,
+    "name": "Lites",
+    "slug": "lites",
+    "productCount": 27,
+    "zalightUrl": "https://www.zalight.it/brand/lites/",
+    "website": "https://www.litessrl.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2026/04/Lites-300x300-1.png",
+    "description": [
+      "Lites è un produttore illuminotecnico italiano operante con i suoi  stabilimenti nel polo tecnologico di Castel Goffredo (Mantova),\nLa compagnia, fondata nel 2014, progetta e produce sistemi di illuminazione per lo spettacolo, gli studi televisivi e il cinema, e per l’utilizzo in interni.\nIl catalogo Lites comprende due linee di profilers e di proiettori LED Fresnel, nonchè una gamma di retrofit LED di facile installazione che trasformano i modelli Source Four in moderni ed efficienti sagomatori a LED."
+    ],
+    "newsFeed": "https://www.litessrl.com/feed/"
+  },
+  {
+    "id": 240,
+    "name": "Genetix",
+    "slug": "genetix",
+    "productCount": 19,
+    "zalightUrl": "https://www.zalight.it/brand/genetix/",
+    "website": "https://chamsyslighting.com/products/genetix-networking-distribution/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2025/07/zalight-genetix.jpg",
+    "description": [
+      "GeNetix è una nuova famiglia di prodotti per il networking e la distribuzione dei dati digitali, creata dal brand internazionale ChamSys.",
+      "GeNetix comprende una gamma completa di nodi Ethernet-DMX, Switch di Rete, Gateways, controlli a parete e dispositivi PoE che organizzano e semplificano la gestione remota di ampi sistemi di illuminazione.",
+      "Qualunque sia la vostra esigenza, da un’installazione illuminotecnica residente al progetto luci di un grande tour, GeNetix offre le soluzioni più adatte a controllare agevolmente e razionalmente ogni network."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 150,
+    "name": "Iluminarc",
+    "slug": "iluminarc",
+    "productCount": 17,
+    "zalightUrl": "https://www.zalight.it/brand/iluminarc/",
+    "website": "https://www.iluminarc.com/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2022/12/iluminarc.jpg",
+    "description": [
+      "Iluminarc – brand della compagnia americana Chauvet – è un’azienda leader nella produzione di sistemi di alta qualità ed elevate prestazioni, dedicati all’illuminazione architettonica.",
+      "Iluminarc offre a architetti, designer, progettisti e installatori, soluzioni illuminotecniche sempre innovative, sviluppate per soddisfare le esigenze di un mercato in continua evoluzione.",
+      "Una gamma di proiettori e sistemi di controllo orientati al cliente: pratici ed efficienti, capaci di facilitare l'esecuzione, il funzionamento e la manutenzione di qualunque progetto di illuminazione architetturale o ambientale, dal più semplice al più complesso."
+    ],
+    "newsFeed": "https://www.iluminarc.com/feed/"
+  },
+  {
+    "id": 71,
+    "name": "Smoke Factory",
+    "slug": "smoke-factory",
+    "productCount": 13,
+    "zalightUrl": "https://www.zalight.it/brand/smoke-factory/",
+    "website": "https://smoke-factory.de/?lang=en",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2022/06/logo_smoke_factory_354x354.jpg",
+    "description": [
+      "Produttore tedesco di Fog e Haze machines professionali.",
+      "Le macchine Smoke Factory – interamente progettate e costruite in Germania – sono note per la praticità d’uso  e la robustezza."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 57,
+    "name": "Gantom",
+    "slug": "gantom",
+    "productCount": 11,
+    "zalightUrl": "https://www.zalight.it/brand/gantom/",
+    "website": "https://www.gantom.com/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2022/03/Logo_Gantom_354x354.png",
+    "description": [
+      "Gantom è una compagnia californiana fondata nel 2010, specializzata nella realizzazione di proiettori, sagomatori, e pinspot super-compatti.\nGantom realizza sistemi con  generazione LED evoluta ideali per l’impiego in locations con forti limitazioni di spazio, in cui i proiettori di dimensioni standard non sarebbero utilizzabili.",
+      "I prodotti Gantom – progettati secondo stringenti criteri di compattezza, modularità, sicurezza e semplicità di utilizzo – sono diffusi in tutto il mondo in una gamma di installazioni, compresi parchi tematici, musei, bar e club."
+    ],
+    "newsFeed": "https://www.gantom.com/feed/"
+  },
+  {
+    "id": 56,
+    "name": "Fomex",
+    "slug": "fomex",
+    "productCount": 10,
+    "zalightUrl": "https://www.zalight.it/brand/fomex/",
+    "website": "https://www.fomex.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/FOMEX.jpg",
+    "description": [
+      "Fomex è una compagnia sud coreana specializzata nella produzione di sistemi di illuminazione e accessori per l’industria video e fotografica.\nFomex è diventato sinonimo di pannello luminoso a LED flessibile, una tecnologia che supporta in maniera inedita il ​​lavoro creativo dei professionisti dell’illuminazione.\nLa compagnia è internazionalmente riconosciuta per i suoi elevati standard produttivi, e per la qualità e affidabilità dei suoi prodotti.\nFomex ha depositato nel corso degli anni vari brevetti per le tecnologie proprietarie sviluppate nel suo centro R&D."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 68,
+    "name": "Quartzcolor",
+    "slug": "quartzcolor",
+    "productCount": 10,
+    "zalightUrl": "https://www.zalight.it/brand/quartzcolor/",
+    "website": "https://www.quartzcolor.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/QUARTZCOLOR.jpg",
+    "description": [
+      "Quartzcolor è una storica azienda italiana che dal 1954 progetta e produce sistemi professionali di illuminazione ad alte prestazioni, ideali in una vasta gamma di applicazioni in studi televisivi, teatri e set cinematografici.\nL’azienda utilizza nel suo ciclo produttivo solo componenti di alta qualità e trattamenti speciali ad alta temperatura per offrire apparecchi adatti agli usi più impegnativi.\nIl catalogo Quartzcolor comprende una varietà di prodotti, dai proiettori Fresnel LED o tradizionali, ai cyclorama, caratterizzati da prestazioni ottiche superiori, grande robustezza, facilità di manutenzione e lunga durata."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 54,
+    "name": "EXALUX",
+    "slug": "exalux",
+    "productCount": 8,
+    "zalightUrl": "https://www.zalight.it/brand/exalux/",
+    "website": "https://www.exalux.eu",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/EXALUX.jpg",
+    "description": [
+      "Exalux è un’azienda francese specializzata nella progettazione di originali soluzioni e tecnologie per l’illuminazione e il suo controllo, destinate al settore del Broadcasting e Cinematografia.\nI prodotti Exalux sono sviluppati con particolare attenzione alla facilità d’uso, al design e alle prestazioni, per offrire agli utenti una grande flessibilità operativa.\nLa filosofia Exalux, infatti, si basa sulla scalabilità delle soluzioni e sulla capacità di adattarsi sia alle esigenze del cliente che ai vincoli ambientali."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 61,
+    "name": "INNLED",
+    "slug": "innled",
+    "productCount": 8,
+    "zalightUrl": "https://www.zalight.it/brand/innled/",
+    "website": "https://www.innled.fr",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2026/04/Innled-300x300-5.png",
+    "description": [
+      "Innled è un’azienda francese che fornisce soluzioni illuminotecniche innovative ai professionisti del settore eventi di tutta Europa, grazie a prodotti studiati per soddisfare le loro specifiche esigenze: versatilità di impiego, mobilità ed elevate performance.\nInnled offre un catalogo di proiettori e lampade LED con alimentazione a batteria e controllo wireless, caratterizzati da grande autonomia, luce potente e direzionale, e un design minimalista e moderno, impreziosito da una grande cura dei dettagli."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 59,
+    "name": "HAWK-WOODS",
+    "slug": "hawk-woods",
+    "productCount": 7,
+    "zalightUrl": "https://www.zalight.it/brand/hawk-woods/",
+    "website": "http://www.hawkwoods.co.uk/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/HAWK.jpg",
+    "description": [
+      "Hawk-Woods è un’azienda inglese attiva da oltre 25 anni nel settore broadcast, con un catalogo di prodotti espressamente dedicati a cameramen e lighting designers: batterie a lunga autonomia compatibili con i più diffusi modelli di telecamere, caricabatterie, adattatori e accessori.\nHawk-Woods propone una varietà di soluzioni di alimentazione, come la classica gamma di batterie V-Lok e Mini V- Lok (le più compatte e leggere al mondo) la cui affidabilità è garantita da una completa serie di protezioni: sovraccarico, scarica, corto-circuito e termica."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 63,
+    "name": "LightShark",
+    "slug": "lightshark",
+    "productCount": 7,
+    "zalightUrl": "https://www.zalight.it/brand/lightshark/",
+    "website": "https://www.lightshark.es",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2022/03/Logo_LiteShark_354x354.png",
+    "description": [
+      "Lightshark è il marchio del produttore spagnolo Equipson, specializzato in Consoles innovative, compatte, leggere ed estremamente versatili.\nI prodotti Lightshark sono progettati e realizzati da un team di sviluppo interdisciplinare, costituito da tecnici, ingegneri e progettisti.\nFacili da utilizzare, intuitive ed ergonomiche, le Consoles Lightshark sono perfette per una gamma di eventi medi e piccoli."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 47,
+    "name": "Akurat Lighting",
+    "slug": "akurat-lighting",
+    "productCount": 6,
+    "zalightUrl": "https://www.zalight.it/brand/akurat-lighting/",
+    "website": "https://www.akurat.lighting",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/akurat.jpg",
+    "description": [
+      "Akurat Lighting è un produttore polacco che offre da oltre 10 anni qualità e innovazione nelle soluzioni di illuminazione per l’industria cinematografica.\nProdotti il cui valore è riconosciuto e apprezzato dalle principali emittenti televisive e società di produzione europee e internazionali, con vari premi al loro attivo nel corso degli anni.\nI prodotti Akurat, progettati per una totale compatibilità con tutti i modelli di fotocamera, garantiscono un’elevata affidabilità anche nelle condizioni più difficili, grazie ai migliori componenti elettronici e a severi controlli di qualità."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 60,
+    "name": "IFF",
+    "slug": "iff",
+    "productCount": 6,
+    "zalightUrl": "https://www.zalight.it/brand/iff/",
+    "website": "http://www.iff.it/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/IFF.jpg",
+    "description": [
+      "IFF è un marchio italiano di riferimento nel settore dei sistemi di sospensione.\nDa oltre 50 anni, IFF progetta e realizza prodotti per il rigging di elevata qualità e totale affidabilità, integrati da una gamma di servizi di supporto.\nRinomati per la loro semplicità di utilizzo e standard di sicurezza, i sistemi IFF – dai pantografi manuali o motorizzati ai paranchi, dai controlli analogici e digitali ai sistemi di binari modulari – sono utilizzati negli studi televisivi e di cineproduzione, auditorium e sale conferenze di tutto il mondo."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 206,
+    "name": "PESS Energy",
+    "slug": "pess-energy",
+    "productCount": 6,
+    "zalightUrl": "https://www.zalight.it/brand/pess-energy/",
+    "website": "https://pessenergy.com/en/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2024/03/pess.png",
+    "description": [
+      "Pess Energy è una giovane e dinamica azienda francese fondata nel 2008, nata dal forte know-how maturato in precedenza nel settore delle batterie e dei pannelli solari hi-tech.\nPess Energy realizza innovativi generatori indoor/outdoor a batteria, destinati al settore degli eventi e all’industria cinematografica, che uniscono elevatissima efficienza e massima mobilità, progettati secondo rigorosi criteri di sostenibilità ambientale.\nI sistemi Pess Energy utilizzano batterie di ultima generazione, ricaricabili dalla rete elettrica o – in maniera totalmente indipendente – direttamente dai pannelli solari.\nPess Energy: la rivoluzionaria alternativa a zero emissioni ai normali generatori elettrici."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 49,
+    "name": "Cineo Lighting",
+    "slug": "cineo-lighting",
+    "productCount": 5,
+    "zalightUrl": "https://www.zalight.it/brand/cineo-lighting/",
+    "website": "https://www.cineolighting.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/cineo.jpg",
+    "description": [
+      "Cineo Lighting è un produttore statunitense specializzato nella creazione di sistemi di illuminazione di alta qualità per i settori del cinema, della televisione e della fotografia.",
+      "Da quando ha iniziato la sua attività 8 anni fa, la compagnia è sempre stata all’avanguardia dell’innovazione, raggiungendo nuovi traguardi nella tecnologia dell’illuminazione.",
+      "Oggi Cineo Lighting continua ad ampliare il suo catalogo con una gamma di sistemi sia per applicazioni in studio che portatili; prodotti che offrono caratteristiche di luminosità, qualità del colore, efficienza energetica e flessibilità d’uso superiori."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 51,
+    "name": "Dop Choice",
+    "slug": "dop-choice",
+    "productCount": 4,
+    "zalightUrl": "https://www.zalight.it/brand/dop-choice/",
+    "website": "https://www.dopchoice.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/dop-choice.jpg",
+    "description": [
+      "DoPchoice, produttore tedesco con sede a Monaco di Baviera, offre un’ampia gamma di accessori progettati per l’utilizzo con i più noti sistemi di illuminazione sul mercato.",
+      "La compagnia, creata nel 2008 dal Direttore della Fotografia Stefan Karle, costruisce prodotti dal design compatto e funzionale; leggeri, facili da usare e veloci da installare, gli accessori DoPchoice soddisfano le esigenze dei tecnici luci piu’ esigenti, dei Direttori della Fotografia e delle rental di tutto il mondo."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 239,
+    "name": "Fragrance Factory",
+    "slug": "fragrance-factory",
+    "productCount": 3,
+    "zalightUrl": "https://www.zalight.it/brand/fragrance-factory/",
+    "website": "https://fragrance-factory.com/en/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2025/07/zalight-fragrance-factory.jpg",
+    "description": [
+      "Fragrance Factory è un brand tedesco specializzata nella realizzazione di macchine professionali per la diffusione di un’ampia varietà di piacevoli fragranze in grandi spazi.",
+      "Dai ristoranti agli hotel, dai teatri ai cinema, dalle sale da concerto ai club, Fragrance Factory crea intense esperienze olfattive che offrono al pubblico una immersione multi-sensoriale coinvolgente e unica.",
+      "I diffusori Fragrance Factory non utilizzano pompe o liquidi ma innovative cartucce, minimizzando così la manutenzione; la diffusione delle varie fragranze è efficace e rapida: fino 400 mc / ora.",
+      "Fragrance Factory nasce da tanti anni di esperienza della Smoke Factory, azienda leader nella produzione di macchine per fumo ed effetti. Grazie a questo know-how anche i prodotti Fragrance Factory possono avvalersi di sistemi di controllo e interfacce utenti all'avanguardia."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 254,
+    "name": "MODE",
+    "slug": "mode",
+    "productCount": 3,
+    "zalightUrl": "https://www.zalight.it/brand/mode/",
+    "website": "https://mode.top/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2026/05/MODE-Logo.jpg",
+    "description": [
+      "MODE è un leader mondiale nelle soluzioni di sollevamento intelligente per lo spettacolo, con 16 anni di esperienza nella creazione di sistemi ad alta tecnologia per il mercato professionale, e oltre 30 brevetti depositati. MODE integra nei propri stabilimenti l’intero ciclo produttivo: dalla ricerca & sviluppo al disegno di ciascuna macchina, dalla produzione al supporto tecnico.\nTutti i sistemi di sollevamento MODE sono realizzati con criteri di elevata sicurezza, in conformità con i principali standard internazionali."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 50,
+    "name": "Cosmolight",
+    "slug": "cosmolight",
+    "productCount": 2,
+    "zalightUrl": "https://www.zalight.it/brand/cosmolight/",
+    "website": "https://www.cosmolight.it",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/cosmolight.jpg",
+    "description": [
+      "Cosmolight è un’azienda italiana che progetta e realizza un’ampia gamma di sistemi di illuminazione per il settore professionale, dedicati a studi TV, studi fotografici, produzioni video e spettacolo.\nL’intero processo produttivo, dal disegno all’assemblaggio, viene effettuato nei propri stabilimenti di Roma.",
+      "Cosmolight unisce know-how, esperienza e attenzione ai dettagli per offrire ai propri clienti sistemi illuminazione innovativi e personalizzabili, di elevata affidabilità e durata nel tempo."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 65,
+    "name": "Mt-Electronic",
+    "slug": "mt-electronic",
+    "productCount": 2,
+    "zalightUrl": "https://www.zalight.it/brand/mt-electronic/",
+    "website": "https://www.mt-electronic.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/MT.jpg",
+    "description": [
+      "MT-Electronic è un’azienda austriaca con sede a Vienna attiva dal 1987, specializzata nella progettazione e realizzazione di prodotti destinati ad arricchire gli spettacoli con effetti creativi e di grande impatto visivo.\nNel catalogo MT-Electronic, un posto di rilievo è occupato dalla gamma di macchine del fumo dotate di caratteristiche di livello superiore; come l’elevata potenza, l’accurato controllo di flusso, e l’utilizzo di liquidi naturali e certificati."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 69,
+    "name": "R2 Lights",
+    "slug": "r2-lights",
+    "productCount": 2,
+    "zalightUrl": "https://www.zalight.it/brand/r2-lights/",
+    "website": "https://www.r2lights.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/R2-LIGHTS.jpg",
+    "description": [
+      "R2 Lights è un produttore polacco che realizza sistemi di illuminazione capaci di unire un’avanzata tecnologia ed un inedito design, con soluzioni che colpiscono per la loro novità.\nIl catalogo R2 Lights è declinato in una serie di prodotti che, grazie ad una estetica accattivante e alla capacià di creare esclusivi effetti visivi, offrono agli scenografi e ai Lighting Designers una straordinaria creatività progettuale e spettacolare.\nR2 Lights controlla tutto il processo produttivo, a garanzia della qualità di ciascun prodotto."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 70,
+    "name": "RGB Laser System",
+    "slug": "rgb-laser-system",
+    "productCount": 2,
+    "zalightUrl": "https://www.zalight.it/brand/rgb-laser-system/",
+    "website": "https://www.rgblasersystem.com",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/03/RGB.jpg",
+    "description": [
+      "RGB Laser System è una compagnia hi-tech che da 20 anni sviluppa e produce proiettori laser di sua ideazione.\nL’azienda, situata in Ungheria, è cresciuta nel corso degli anni parallelamente al progresso delle tecnologie illuminotecniche, e oggi i prodotti RGB Laser System incorporano le funzionalità più sofisticate e aggiornate disponibili sul mercato.\nIl catalogo RGB Laser System, costantemente in evoluzione, comprende teste mobili laser, multi-effetti laser, e proiettori laser disponibili in una gamma di modelli e di progressive potenze adatte ad utilizzi indoor o in grandi spettacoli outdoor."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 197,
+    "name": "Spotrack",
+    "slug": "spotrack",
+    "productCount": 2,
+    "zalightUrl": "https://www.zalight.it/brand/spotrack/",
+    "website": "https://www.spotrack.com/",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/10/Logo-Spotrack1.png",
+    "description": [
+      "Spotrack è una giovane e brillante compagnia irlandese che ha rivoluzionato lo stage lighting professionale, con la creazione di innovativi sistemi digitali che automatizzano il puntamento e il controllo live di qualunque proiettore DMX.",
+      "Guidata da un team che combina una vasta esperienza nella computer vision e nell’entertainment lighting, Spotrack offre un catalogo di prodotti con potenti funzioni real-time, che rendono preciso ed immediato il puntamento di molteplici proiettori sullo stesso soggetto, fornendo inedite e creative possibilità agli operatori luci."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 46,
+    "name": "3DSoundimage",
+    "slug": "3dsoundimage",
+    "productCount": 1,
+    "zalightUrl": "https://www.zalight.it/brand/3dsoundimage/",
+    "website": "https://www.3dsoundimage.it",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2023/01/3d.jpg",
+    "description": [
+      "3D Sound Image è una società specializzata nella ricerca e sviluppo di tecnologie all’avanguardia rivolta al settore dello spettacolo, con particolare attenzione a nuovi prodotti ed applicazioni nei campi audio, luci e video.\n3D Sound Image segue il progetto dall’idea alla realizzazione e grazie alla lunga esperienza dei suoi tecnici, riesce a fornire soluzioni sempre pratiche ed efficaci.\nTecniche in continuo sviluppo grazie alla ricerca di professionisti del settore, permettono alla 3D sound image di essere un’azienda sempre all’avanguardia nella fornitura di apparecchiature e servizi.\nIl servizio è completamente personalizzabile, adattabile a qualunque tipo di esigenza, per garantire al cliente la massima libertà di espressione."
+    ],
+    "newsFeed": null
+  },
+  {
+    "id": 67,
+    "name": "MYMETHOD",
+    "slug": "mymethod",
+    "productCount": 1,
+    "zalightUrl": "https://www.zalight.it/brand/mymethod/",
+    "website": "https://www.mymethod.pl",
+    "logo": "https://www.zalight.it/luce/wp-content/uploads/2021/08/MyMethod.jpg",
+    "description": [
+      "My Method è un nuovo Brand nel mercato globale dell’illuminazione scenica che offre soluzioni innovative per l’industria dell’intrattenimento.",
+      "Progettazione, Sviluppo e Produzione sono gestite in piena autonomia e interamente in Polonia, grazie a impianti all’avanguardia e ampie capacità industriali.",
+      "I fondatori dell’azienda hanno accumulato molti anni di esperienza nella ideazione, progettazione e realizzazione di prodotti illuminotecnici di altissima qualità. Questi professionisti hanno deciso di unire le loro competenze ed i loro interessi in questo nuovo progetto chiamato My Method."
+    ],
+    "newsFeed": null
+  }
+]

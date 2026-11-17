@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { featuredProducts } from '../lib/catalog';
+
+const suggestions = featuredProducts(4);
+---
+
+<BaseLayout title="Pagina non trovata" description="La pagina che cerchi non esiste o è stata spostata." noindex>
+  <section class="container-x section text-center">
+    <p class="eyebrow justify-center">Errore 404</p>
+    <h1 class="heading-xl mt-4">Blackout: pagina non trovata</h1>
+    <p class="lead mx-auto mt-5 max-w-xl">Il link potrebbe essere cambiato dopo l’ultimo aggiornamento del catalogo. Riparti dal catalogo o contattaci.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="/prodotti" class="btn-primary">Vai al catalogo</a>
+      <a href="/" class="btn-secondary">Torna alla home</a>
+    </div>
+  </section>
+  <section class="container-x pb-20">
+    <h2 class="heading-md">Prodotti in evidenza</h2>
+    <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {suggestions.map((p) => <ProductCard product={p} />)}
+    </div>
+  </section>
+</BaseLayout>

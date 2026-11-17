@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import LiveNews from '../components/LiveNews.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { caseStudies, productsMentionedIn } from '../lib/catalog';
+
+const all = caseStudies();
+const title = 'Case study: tour, show e installazioni';
+const description = 'Le storie di prodotto raccontate da ZAlight: Tiziano Ferro, Vasco, Mengoni, Ultimo, Annalisa, Sanremo, Battiti Live, Netflix e molti altri con Chauvet Professional. Sezione aggiornata automaticamente.';
+
+// Prodotti più citati nei case study (per i filtri rapidi)
+const mentions = new Map<string, { slug: string; name: string; count: number }>();
+for (const post of all) {
+  for (const p of productsMentionedIn(post.title, 3)) {
+    const m = mentions.get(p.slug) ?? { slug: p.slug, name: p.name, count: 0 };
+    m.count++;
+    mentions.set(p.slug, m);
+  }
+}
+const topProducts = [...mentions.values()].sort((a, b) => b.count - a.count).slice(0, 8);
+---
+
+<BaseLayout title={title} description={description} image={all[0]?.image ?? undefined}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Case study' }]} />
+    <SectionHeading as="h1" class="mt-6" eyebrow="Case study" title="Sul palco con i grandi tour e le produzioni italiane" description="Ogni storia racconta come i prodotti che distribuiamo lavorano davvero in scena: numero di proiettori, scelte del lighting designer, risultati. Fonte: redazione ZAlight, aggiornamento automatico." />
+  </section>
+
+  {
+    topProducts.length > 0 && (
+      <section class="container-x pt-8">
+        <p class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">I protagonisti più frequenti</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {topProducts.map((p) => (
+            <li>
+              <a href={`/prodotti/${p.slug}`} class="chip hover:border-amber-400/60 hover:text-amber-300">
+                {p.name} <span class="ml-1 text-ink-500">{p.count}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="container-x section pt-10">
+    <LiveNews limit={all.length} featuredFirst />
+  </section>
+
+  <CtaBanner title="Vuoi lo stesso risultato sul tuo palco?" description="Raccontaci la produzione: ti aiutiamo a scegliere e dimensionare la dotazione, con demo dei prodotti e supporto del reparto tecnico ZAlight." />
+</BaseLayout>

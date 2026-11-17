@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { products, sortedBrands, tipologie, settori, meta } from '../../lib/catalog';
+
+const brandOptions = sortedBrands();
+const sorted = [...products].sort((a, b) => Number(b.isNew) - Number(a.isNew) || b.publishedAt.localeCompare(a.publishedAt));
+const title = 'Catalogo prodotti ZAlight';
+const description = `${meta.counts.products} prodotti per illuminazione professionale: teste mobili, PAR LED, barre, strobo, controlli, networking, fumo e accessori di ${meta.counts.brands} brand distribuiti da ZAlight. Consulenza e preventivi per Emilia-Romagna e Marche.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container-x pt-8 pb-6 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Prodotti' }]} />
+    <div class="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Catalogo</p>
+        <h1 class="heading-xl mt-3">Tutti i prodotti, <span class="text-gradient-amber">una sola chiamata</span>.</h1>
+        <p class="lead mt-5">
+          Il catalogo completo ZAlight con schede tecniche e video. Filtra per brand, tipologia o settore: per prezzi, disponibilità e
+          demo in Emilia-Romagna e Marche parla direttamente con noi.
+        </p>
+      </div>
+      <a href="/contatti" class="btn-primary shrink-0">Richiedi un preventivo</a>
+    </div>
+  </section>
+
+  <section class="container-x" id="catalogo">
+    <div class="card sticky top-[68px] z-30 grid gap-3 p-4 sm:top-[76px] lg:grid-cols-[1.4fr_1fr_1fr_1fr_auto]" data-filters>
+      <label class="relative block">
+        <span class="sr-only">Cerca un prodotto</span>
+        <svg class="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-ink-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+        <input type="search" name="q" placeholder="Cerca: Maverick, PXL Bar, strobo, IP65…" class="field field-search" autocomplete="off" />
+      </label>
+      <select name="brand" class="field" aria-label="Filtra per brand">
+        <option value="">Tutti i brand</option>
+        {brandOptions.map((b) => <option value={b.slug}>{b.name} ({b.productCount})</option>)}
+      </select>
+      <select name="tipologia" class="field" aria-label="Filtra per tipologia">
+        <option value="">Tutte le tipologie</option>
+        {tipologie.filter((t) => t.count > 0).map((t) => <option value={t.slug}>{t.name} ({t.count})</option>)}
+      </select>
+      <select name="settore" class="field" aria-label="Filtra per settore">
+        <option value="">Tutti i settori</option>
+        {settori.map((s) => <option value={s.slug}>{s.name} ({s.count})</option>)}
+      </select>
+      <button type="button" class="btn-secondary px-4 py-2.5 text-xs" data-reset>Azzera</button>
+    </div>
+
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm text-ink-300">
+      <h2 class="font-normal"><span data-count class="font-semibold text-ink-50">{sorted.length}</span> prodotti</h2>
+      <label class="inline-flex cursor-pointer items-center gap-2">
+        <input type="checkbox" name="new" class="h-4 w-4 rounded border-ink-500 bg-ink-800 accent-amber-500" />
+        Solo novità
+      </label>
+    </div>
+
+    <div class="catalog-grid mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-grid>
+      {sorted.map((p, i) => <ProductCard product={p} filterable priority={i < 4} />)}
+    </div>
+    <p class="card mt-6 hidden p-10 text-center text-ink-300" data-empty>
+      Nessun prodotto corrisponde ai filtri. <button type="button" class="font-semibold text-amber-400 hover:underline" data-reset>Azzera i filtri</button>
+      oppure <a href="/contatti" class="font-semibold text-amber-400 hover:underline">chiedici un consiglio</a>.
+    </p>
+  </section>
+
+  <CtaBanner
+    title="Non trovi quello che cerchi?"
+    description="Il catalogo ZAlight è in continua evoluzione e molti prodotti sono disponibili su ordinazione. Raccontaci l’esigenza: ti proponiamo la soluzione giusta, anche in alternativa tra brand."
+  />
+</BaseLayout>
+
+<style>
+  @reference '../../styles/global.css';
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-2.5 text-sm text-ink-50 placeholder:text-ink-500 transition-colors focus:border-amber-400/70 focus:outline-none;
+  }
+  .field-search {
+    padding-left: 2.5rem;
+  }
+  /* Rendering differito delle card fuori viewport: con 450 prodotti riduce
+     drasticamente il costo di stile/layout iniziale (le prime 8 restano eager). */
+  .catalog-grid > :global(article:nth-child(n + 9)) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 420px;
+  }
+  select.field {
+    appearance: none;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%238a8aa3' stroke-width='2'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-filters]');
+  const grid = document.querySelector<HTMLElement>('[data-grid]');
+  if (root && grid) {
+    const q = root.querySelector<HTMLInputElement>('input[name=q]')!;
+    const brand = root.querySelector<HTMLSelectElement>('select[name=brand]')!;
+    const tipologia = root.querySelector<HTMLSelectElement>('select[name=tipologia]')!;
+    const settore = root.querySelector<HTMLSelectElement>('select[name=settore]')!;
+    const onlyNew = document.querySelector<HTMLInputElement>('input[name=new]')!;
+    const count = document.querySelector<HTMLElement>('[data-count]')!;
+    const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-search]'));
+
+    const normalize = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    function apply(pushState = true) {
+      const terms = normalize(q.value).split(/\s+/).filter(Boolean);
+      let visible = 0;
+      for (const card of cards) {
+        const ok =
+          (!brand.value || card.dataset.brand === brand.value) &&
+          (!tipologia.value || (card.dataset.tipologie ?? '').split(' ').includes(tipologia.value)) &&
+          (!settore.value || (card.dataset.settori ?? '').split(' ').includes(settore.value)) &&
+          (!onlyNew.checked || card.dataset.new === 'true') &&
+          terms.every((t) => normalize(card.dataset.search ?? '').includes(t));
+        card.classList.toggle('hidden', !ok);
+        if (ok) visible++;
+      }
+      count.textContent = String(visible);
+      empty.classList.toggle('hidden', visible > 0);
+
+      if (pushState) {
+        const params = new URLSearchParams();
+        if (q.value) params.set('q', q.value);
+        if (brand.value) params.set('brand', brand.value);
+        if (tipologia.value) params.set('tipologia', tipologia.value);
+        if (settore.value) params.set('settore', settore.value);
+        if (onlyNew.checked) params.set('new', '1');
+        const qs = params.toString();
+        history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+      }
+    }
+
+    // Stato iniziale da URL (es. /prodotti?brand=chauvet&tipologia=teste-mobili-profile)
+    const params = new URLSearchParams(location.search);
+    q.value = params.get('q') ?? '';
+    brand.value = params.get('brand') ?? '';
+    tipologia.value = params.get('tipologia') ?? '';
+    settore.value = params.get('settore') ?? '';
+    onlyNew.checked = params.get('new') === '1';
+    apply(false);
+
+    let timer: number | undefined;
+    q.addEventListener('input', () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => apply(), 120);
+    });
+    for (const el of [brand, tipologia, settore, onlyNew]) el.addEventListener('change', () => apply());
+    document.querySelectorAll<HTMLButtonElement>('[data-reset]').forEach((btn) =>
+      btn.addEventListener('click', () => {
+        q.value = '';
+        brand.value = '';
+        tipologia.value = '';
+        settore.value = '';
+        onlyNew.checked = false;
+        apply();
+      }),
+    );
+  }
+</script>

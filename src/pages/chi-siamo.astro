@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import RemoteImage from '../components/RemoteImage.astro';
+import { site, zalight, territory } from '../config/site';
+import { meta, references } from '../lib/catalog';
+
+const title = 'Chi siamo – agenzia ZAlight per Emilia-Romagna e Marche';
+const description = `${site.name} è l’agenzia tecnico-commerciale che rappresenta ZAlight in Emilia-Romagna e Marche. Conosciamo i prodotti perché li usiamo: consulenza, demo e supporto a rental, teatri, broadcaster, installatori e lighting designer.`;
+
+const values = [
+  { title: 'Competenza tecnica', text: 'Programmiamo console, configuriamo reti DMX/Art-Net/sACN, leggiamo fotometrie. Parliamo la lingua di chi lavora sul palco e in studio.' },
+  { title: 'Presenza sul territorio', text: 'Sopralluoghi e demo in giornata in tutte le 14 province. Un referente che conosce i tuoi spazi, le tue produzioni e le tue scadenze.' },
+  { title: 'Trasparenza', text: 'Proposte motivate, confronto onesto tra prodotti e brand, nessuna sovra-specifica. Il nostro obiettivo è il tuo risultato in scena.' },
+  { title: 'Continuità', text: 'Non spariamo dopo l’ordine: formazione, assistenza e aggiornamenti sui nuovi prodotti fanno parte del servizio.' },
+];
+
+// TODO: sostituire con il team reale di ARTCONTENT (nome, ruolo, contatti, foto)
+const team = [
+  { name: 'Nome Cognome', role: 'Area Manager Emilia-Romagna', focus: 'Rental, teatri, eventi', email: site.email },
+  { name: 'Nome Cognome', role: 'Area Manager Marche', focus: 'Broadcast, installazioni, architetturale', email: site.email },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Chi siamo' }]} />
+    <div class="mt-6 grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <p class="eyebrow">Chi siamo</p>
+        <h1 class="heading-xl mt-3">Commerciali tecnici, <span class="text-gradient-amber">non venditori di cataloghi</span>.</h1>
+        <p class="lead mt-6">
+          {site.name} rappresenta <strong class="text-ink-50">ZAlight</strong> in Emilia-Romagna e Marche. Portiamo sul territorio
+          i brand che ZAlight distribuisce in esclusiva per l’Italia – Chauvet Professional, Chauvet DJ, Iluminarc – e tutti gli altri
+          marchi del suo portafoglio, con la competenza di chi quei prodotti li accende, li programma e li porta in scena.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/contatti" class="btn-primary">Conosciamoci</a>
+          <a href="/servizi" class="btn-secondary">Cosa facciamo</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="card overflow-hidden">
+          <RemoteImage src={zalight.awardPhoto} alt="ZAlight premiata come miglior distributore Chauvet Professional EMEA 2024" width={960} aspect={4 / 3} fit="cover" priority class="h-full w-full object-cover" sizes="(min-width:1024px) 50vw, 100vw" />
+        </div>
+        <p class="card absolute -bottom-5 left-5 right-5 bg-ink-800 p-4 text-xs leading-snug text-ink-200 sm:left-auto sm:max-w-xs">
+          <strong class="block text-sm text-ink-50">{zalight.award}</strong>
+          Un riconoscimento ottenuto in soli due anni di attività sul brand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x section">
+    <SectionHeading eyebrow="Come lavoriamo" title="Quattro cose su cui non trattiamo" />
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        values.map((v) => (
+          <article class="card p-6">
+            <h2 class="font-display text-lg font-semibold text-ink-50">{v.title}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">{v.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-ink-900/50">
+    <div class="container-x section">
+      <SectionHeading eyebrow="Il team" title="Le persone che incontrerai" description="Un referente per area, con il supporto diretto del reparto tecnico ZAlight." />
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
+        {
+          team.map((m) => (
+            <article class="card flex items-center gap-5 p-6">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 font-display text-xl font-bold text-ink-950">
+                {m.name.split(' ').map((w) => w[0]).join('')}
+              </span>
+              <div class="min-w-0">
+                <h3 class="font-display text-lg font-semibold text-ink-50">{m.name}</h3>
+                <p class="text-sm text-amber-400">{m.role}</p>
+                <p class="mt-1 text-xs text-ink-300">{m.focus}</p>
+                <a href={`mailto:${m.email}`} class="mt-2 inline-block text-xs text-ink-200 hover:text-amber-400">{m.email}</a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x section grid items-center gap-12 lg:grid-cols-2">
+    <div class="card overflow-hidden">
+      <RemoteImage src={zalight.teamPhoto} alt="Il team ZAlight" width={960} aspect={3 / 2} fit="cover" class="h-full w-full object-cover" sizes="(min-width:1024px) 50vw, 100vw" />
+    </div>
+    <div>
+      <p class="eyebrow">Il mandante</p>
+      <h2 class="heading-lg mt-3">ZAlight, dal {zalight.founded}</h2>
+      <div class="prose-custom mt-6">
+        <p>
+          ZAlight nasce nel 2013 a Moglia (MN) dal progetto di creare una struttura distributiva in un mercato in cui i fondatori
+          lavoravano già da molto tempo. Anni di crescita costante nei settori chiave del lighting professionale – broadcast, eventi,
+          cinema, teatro, rental, architetturale – a fianco dei maggiori professionisti, collaborando a show ed eventi di successo.
+        </p>
+        <p>
+          Oggi distribuisce in esclusiva per l’Italia un portafoglio di {meta.counts.brands} brand internazionali, con showroom,
+          reparto tecnico, magazzino e un team commerciale e tecnico che segue i più grandi tour italiani.
+        </p>
+      </div>
+      <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
+        <div><dt class="text-ink-300">Sede</dt><dd class="text-ink-50">{zalight.address}</dd></div>
+        <div><dt class="text-ink-300">Contatti</dt><dd class="text-ink-50">{zalight.phone}<br />{zalight.email}</dd></div>
+      </dl>
+      <a href={zalight.url} target="_blank" rel="noopener" class="btn-secondary mt-8">Visita zalight.it ↗</a>
+    </div>
+  </section>
+
+  {
+    references.length > 0 && (
+      <section class="container-x pb-10">
+        <p class="text-center text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Network e produzioni che hanno scelto ZAlight</p>
+        <ul class="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-10">
+          {references.map((r) => (
+            <li class="flex aspect-[3/2] items-center justify-center rounded-xl bg-white p-3">
+              <RemoteImage src={r.url} alt={r.name} width={160} class="max-h-10 w-auto object-contain" sizes="100px" />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="container-x pb-6">
+    <div class="card p-8">
+      <h2 class="heading-md">Dove ci trovi</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        {
+          territory.regions.map((r) => (
+            <div>
+              <h3 class="font-display font-semibold text-ink-50">{r.name}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300">{r.provinces.join(' · ')}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

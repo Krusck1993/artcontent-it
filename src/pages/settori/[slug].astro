@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RemoteImage from '../../components/RemoteImage.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { settori, productsBySettore, getTipologia, getBrand } from '../../lib/catalog';
+
+export function getStaticPaths() {
+  return settori.map((settore) => ({ params: { slug: settore.slug }, props: { settore } }));
+}
+
+const { settore } = Astro.props;
+const list = productsBySettore(settore.slug);
+
+const groups = new Map<string, typeof list>();
+for (const p of list) {
+  const key = p.tipologie[0] ?? 'altro';
+  groups.set(key, [...(groups.get(key) ?? []), p]);
+}
+const grouped = [...groups.entries()]
+  .map(([slug, items]) => ({ slug, name: getTipologia(slug)?.name ?? 'Altri prodotti', items }))
+  .sort((a, b) => b.items.length - a.items.length);
+
+const brandsInSector = [...new Set(list.map((p) => p.brand))].map(getBrand).filter((b): b is NonNullable<typeof b> => Boolean(b));
+
+const title = `Illuminazione per ${settore.name}`;
+const description = `${settore.description[0]?.slice(0, 160) ?? ''} ${list.length} prodotti consigliati da ZAlight per il settore ${settore.name}. Consulenza e demo in Emilia-Romagna e Marche.`;
+---
+
+<BaseLayout title={title} description={description} image={settore.gallery[0]}>
+  <section class="relative overflow-hidden">
+    {
+      settore.gallery[0] && (
+        <div class="absolute inset-0 -z-10">
+          <RemoteImage src={settore.gallery[0]} alt="" width={1600} aspect={16 / 7} fit="cover" priority class="h-full w-full object-cover opacity-30" sizes="100vw" />
+          <div class="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-ink-950/80 to-ink-950" />
+        </div>
+      )
+    }
+    <div class="container-x pt-8 pb-12 sm:pt-12 sm:pb-16">
+      <Breadcrumbs items={[{ label: 'Settori', href: '/settori' }, { label: settore.name }]} />
+      <p class="eyebrow mt-8">Settore</p>
+      <h1 class="heading-xl mt-3">{settore.name}</h1>
+      <div class="prose-custom mt-6 max-w-3xl text-lg">
+        {settore.description.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contatti" class="btn-primary">Richiedi una consulenza per {settore.name.toLowerCase()}</a>
+        <a href="#prodotti" class="btn-secondary">Vedi i {list.length} prodotti</a>
+      </div>
+    </div>
+  </section>
+
+  {
+    settore.gallery.length > 1 && (
+      <section class="container-x">
+        <div class="grid grid-cols-3 gap-3">
+          {settore.gallery.slice(0, 3).map((g) => (
+            <div class="card aspect-[4/3] overflow-hidden">
+              <RemoteImage src={g} alt={`${settore.name} – esempio di applicazione`} width={640} aspect={4 / 3} fit="cover" class="h-full w-full object-cover" sizes="33vw" />
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    brandsInSector.length > 0 && (
+      <section class="container-x py-10">
+        <p class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Brand per questo settore</p>
+        <ul class="mt-4 flex flex-wrap gap-2">
+          {brandsInSector.map((b) => (
+            <li>
+              <a href={`/vendor/${b.slug}`} class="chip hover:border-amber-400/60 hover:text-amber-300">
+                {b.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="container-x pb-6" id="prodotti">
+    <h2 class="heading-lg">Prodotti consigliati</h2>
+    {
+      grouped.length > 1 && (
+        <nav class="mt-6 flex flex-wrap gap-2" aria-label="Tipologie">
+          {grouped.map((g) => (
+            <a href={`#${g.slug}`} class="chip hover:border-amber-400/60 hover:text-amber-300">
+              {g.name} <span class="ml-1 text-ink-500">{g.items.length}</span>
+            </a>
+          ))}
+        </nav>
+      )
+    }
+    {
+      grouped.map((g) => (
+        <div id={g.slug} class="mt-12 scroll-mt-28">
+          <h3 class="heading-md flex items-baseline gap-3">
+            {g.name}
+            <span class="text-sm font-normal text-ink-300">{g.items.length}</span>
+          </h3>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {g.items.map((p) => (
+              <ProductCard product={p} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <CtaBanner title={`Un progetto ${settore.name.toLowerCase()} in Emilia-Romagna o Marche?`} description="Sopralluogo, studio illuminotecnico e demo dei prodotti nel tuo spazio: raccontaci l’idea, al resto pensiamo noi insieme al reparto tecnico ZAlight." />
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import RemoteImage from './RemoteImage.astro';
+import type { Brand } from '../lib/catalog';
+import { exclusiveBrandSlugs } from '../lib/catalog';
+
+interface Props {
+  brand: Brand;
+  compact?: boolean;
+}
+const { brand, compact = false } = Astro.props;
+const exclusive = exclusiveBrandSlugs.includes(brand.slug);
+---
+
+{
+  compact ? (
+    <a
+      href={`/vendor/${brand.slug}`}
+      class="card card-hover flex aspect-[3/2] items-center justify-center bg-white p-5"
+      title={brand.name}
+      aria-label={brand.name}
+    >
+      {brand.logo ? (
+        <RemoteImage src={brand.logo} alt={brand.name} width={240} class="max-h-16 w-auto object-contain" sizes="160px" />
+      ) : (
+        <span class="font-display text-lg font-bold text-ink-900">{brand.name}</span>
+      )}
+    </a>
+  ) : (
+    <article class="card card-hover group relative flex flex-col overflow-hidden">
+      <div class="flex h-40 items-center justify-center bg-white p-6">
+        {brand.logo ? (
+          <RemoteImage src={brand.logo} alt={brand.name} width={320} class="max-h-24 w-auto object-contain" sizes="(min-width:1024px) 240px, 40vw" />
+        ) : (
+          <span class="font-display text-2xl font-bold text-ink-900">{brand.name}</span>
+        )}
+      </div>
+      <div class="flex flex-1 flex-col gap-2 p-5">
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="font-display text-lg font-semibold text-ink-50">
+            <a href={`/vendor/${brand.slug}`} class="after:absolute after:inset-0 after:content-['']">
+              {brand.name}
+            </a>
+          </h3>
+          {exclusive && <span class="chip chip-active shrink-0 text-[10px]">Esclusiva Italia</span>}
+        </div>
+        {brand.description[0] && <p class="line-clamp-3 text-sm leading-relaxed text-ink-300">{brand.description[0]}</p>}
+        <p class="mt-auto pt-2 text-xs font-medium text-ink-300">
+          {brand.productCount} prodott{brand.productCount === 1 ? 'o' : 'i'} a catalogo
+        </p>
+      </div>
+    </article>
+  )
+}

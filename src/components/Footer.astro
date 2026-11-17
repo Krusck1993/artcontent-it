@@ -1,0 +1,75 @@
+---
+import Logo from './Logo.astro';
+import { site, zalight, territory, nav } from '../config/site';
+import { sortedBrands, meta } from '../lib/catalog';
+
+const topBrands = sortedBrands().slice(0, 8);
+const year = new Date().getFullYear();
+const synced = new Intl.DateTimeFormat('it-IT', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(meta.syncedAt));
+---
+
+<footer class="relative mt-24 border-t border-white/5 bg-ink-900">
+  <div class="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent"></div>
+  <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <Logo />
+      <p class="mt-5 max-w-sm text-sm leading-relaxed text-ink-300">
+        {site.description}
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <a href={site.social.linkedin} target="_blank" rel="noopener" class="chip hover:border-ink-300">LinkedIn</a>
+        <a href={site.social.instagram} target="_blank" rel="noopener" class="chip hover:border-ink-300">Instagram</a>
+      </div>
+    </div>
+
+    <div class="grid gap-10 sm:grid-cols-3 lg:col-span-8">
+      <div>
+        <h3 class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Esplora</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          {nav.map((item) => (
+            <li><a href={item.href} class="text-ink-200 hover:text-amber-400">{item.label}</a></li>
+          ))}
+          <li><a href="/contatti" class="text-ink-200 hover:text-amber-400">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Brand principali</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          {topBrands.map((b) => (
+            <li><a href={`/vendor/${b.slug}`} class="text-ink-200 hover:text-amber-400">{b.name}</a></li>
+          ))}
+          <li><a href="/vendor" class="font-semibold text-amber-400 hover:underline">Tutti i {meta.counts.brands} brand →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Contatti</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-ink-200">
+          <li><a href={`mailto:${site.email}`} class="hover:text-amber-400">{site.email}</a></li>
+          <li><a href={site.phoneHref} class="hover:text-amber-400">{site.phone}</a></li>
+          <li>{site.address.street}<br />{site.address.zip} {site.address.city} ({site.address.province})</li>
+          <li class="text-ink-300">{site.openingHours}</li>
+        </ul>
+        <h3 class="mt-8 text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Territorio</h3>
+        <p class="mt-3 text-xs leading-relaxed text-ink-300">
+          {territory.regions.map((r) => r.provinces.join(', ')).join(' · ')}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/5">
+    <div class="container-x flex flex-col gap-4 py-6 text-xs text-ink-300 md:flex-row md:items-center md:justify-between">
+      <p>
+        © {year} {site.legalName} · P.IVA {site.vat} ·
+        <a href="/privacy-policy" class="hover:text-ink-100">Privacy</a> ·
+        <a href="/cookie-policy" class="hover:text-ink-100">Cookie</a>
+      </p>
+      <p class="flex flex-wrap items-center gap-x-2">
+        <span>Agenzia ufficiale</span>
+        <a href={zalight.url} target="_blank" rel="noopener" class="font-semibold text-ink-100 hover:text-amber-400">{zalight.name}</a>
+        <span aria-hidden="true">·</span>
+        <span>Catalogo sincronizzato il {synced}</span>
+      </p>
+    </div>
+  </div>
+</footer>

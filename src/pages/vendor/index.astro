@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandCard from '../../components/BrandCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import VendorNewsList from '../../components/VendorNewsList.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { sortedBrands, exclusiveBrandSlugs, meta, vendorNews } from '../../lib/catalog';
+import { zalight } from '../../config/site';
+
+const all = sortedBrands();
+const exclusive = all.filter((b) => exclusiveBrandSlugs.includes(b.slug));
+const others = all.filter((b) => !exclusiveBrandSlugs.includes(b.slug));
+const title = 'Vendor e brand distribuiti';
+const description = `I ${meta.counts.brands} brand di illuminazione professionale distribuiti in Italia da ZAlight e rappresentati da ARTCONTENT in Emilia-Romagna e Marche: Chauvet Professional, Chauvet DJ, Iluminarc, Lites, Genetix, Smoke Factory, Gantom e altri.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Vendor' }]} />
+    <SectionHeading
+      as="h1"
+      class="mt-6"
+      eyebrow="Vendor"
+      title="I brand che rappresentiamo sul territorio"
+      description={`Solo marchi professionali, selezionati da ZAlight per i settori chiave del lighting. Per ognuno trovi catalogo, link al sito ufficiale e le ultime novità dal produttore. Distribuzione esclusiva per l’Italia: ${exclusive.map((b) => b.name).join(', ')}.`}
+    />
+  </section>
+
+  <section class="container-x section pt-12">
+    <h2 class="heading-md">Distribuzione esclusiva Italia</h2>
+    <p class="mt-2 max-w-2xl text-sm text-ink-300">{zalight.award}: ZAlight è il riferimento ufficiale in Italia per il gruppo Chauvet. Garanzia, ricambi e assistenza passano da qui.</p>
+    <div class="mt-8 grid gap-5 md:grid-cols-3">
+      {exclusive.map((b) => <BrandCard brand={b} />)}
+    </div>
+  </section>
+
+  <section class="container-x pb-10">
+    <h2 class="heading-md">Tutti gli altri brand</h2>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {others.map((b) => <BrandCard brand={b} />)}
+    </div>
+  </section>
+
+  {
+    vendorNews.length > 0 && (
+      <section class="section bg-ink-900/50">
+        <div class="container-x">
+          <SectionHeading eyebrow="Dai siti dei produttori" title="Ultime novità dai vendor" description="Comunicati e aggiornamenti raccolti automaticamente dai siti ufficiali dei brand a ogni pubblicazione del sito." />
+          <div class="mt-10">
+            <VendorNewsList limit={9} />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <CtaBanner
+    title="Vuoi vedere un brand all’opera?"
+    description="Organizziamo demo comparative tra prodotti e brand diversi, nel tuo spazio o nello showroom ZAlight. Dicci cosa stai valutando."
+    primaryLabel="Prenota una demo"
+  />
+</BaseLayout>

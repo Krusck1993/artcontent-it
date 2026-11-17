@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../config/site';
+---
+
+<BaseLayout title="Privacy policy" description={`Informativa sul trattamento dei dati personali di ${site.legalName} ai sensi del Regolamento (UE) 2016/679.`} noindex>
+  <section class="container-x max-w-3xl pt-8 pb-20 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'Privacy policy' }]} />
+    <h1 class="heading-lg mt-6">Privacy policy</h1>
+    <div class="prose-custom mt-8 text-sm">
+      <p><strong>Titolare del trattamento</strong>: {site.legalName}, {site.address.street}, {site.address.zip} {site.address.city} ({site.address.province}) – P.IVA {site.vat} – email {site.email}.</p>
+      <h2 class="heading-md mt-8 text-xl">Dati trattati e finalità</h2>
+      <p>Trattiamo i dati che ci fornisci volontariamente tramite il form contatti, email o telefono (nome, azienda, email, telefono, provincia, settore, contenuto della richiesta) al solo fine di rispondere alla tua richiesta di informazioni, consulenza, demo o preventivo e per le attività precontrattuali conseguenti. Base giuridica: esecuzione di misure precontrattuali adottate su tua richiesta (art. 6.1.b GDPR) e, per eventuali comunicazioni commerciali successive, il tuo consenso (art. 6.1.a).</p>
+      <h2 class="heading-md mt-8 text-xl">Dati di navigazione</h2>
+      <p>Il sito è statico e non utilizza cookie di profilazione né strumenti di tracciamento di terze parti. Il server di hosting può registrare log tecnici (indirizzo IP, user agent, pagine richieste) per finalità di sicurezza e statistica aggregata, conservati per il tempo strettamente necessario.</p>
+      <h2 class="heading-md mt-8 text-xl">Contenuti di terze parti</h2>
+      <p>Le immagini e gli aggiornamenti di catalogo e news provengono dal sito del distributore ZAlight (zalight.it) e dai siti ufficiali dei produttori; i video YouTube vengono caricati solo dopo un tuo click, in modalità “privacy-enhanced” (youtube-nocookie.com). Cliccando su link esterni si applicano le informative dei rispettivi titolari.</p>
+      <h2 class="heading-md mt-8 text-xl">Comunicazione e conservazione</h2>
+      <p>I dati possono essere comunicati a ZAlight Srl, distributore dei prodotti richiesti, quando necessario per evadere la richiesta (quotazioni, disponibilità, assistenza). Non vengono diffusi né trasferiti fuori dallo Spazio Economico Europeo. Sono conservati per il tempo necessario a gestire la richiesta e per i successivi 24 mesi, salvo obblighi di legge o instaurazione di un rapporto contrattuale.</p>
+      <h2 class="heading-md mt-8 text-xl">Diritti dell’interessato</h2>
+      <p>Puoi esercitare in ogni momento i diritti di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione (artt. 15-22 GDPR) scrivendo a {site.email}. Hai inoltre il diritto di proporre reclamo al Garante per la protezione dei dati personali.</p>
+      <p class="mt-8 text-xs text-ink-300">Ultimo aggiornamento: {new Intl.DateTimeFormat('it-IT', { dateStyle: 'long' }).format(new Date())}. Questo testo è una base da far verificare al proprio consulente privacy.</p>
+    </div>
+  </section>
+</BaseLayout>

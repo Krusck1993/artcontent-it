@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProductCard from '../components/ProductCard.astro';
+import LiveNews from '../components/LiveNews.astro';
+import VendorNewsList from '../components/VendorNewsList.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { newProducts, vendorNews, sortedBrands, meta } from '../lib/catalog';
+import { zalight } from '../config/site';
+
+const novita = newProducts(8);
+const brandsWithFeed = sortedBrands().filter((b) => b.newsFeed);
+const brandsWithSite = sortedBrands().filter((b) => b.website);
+const title = 'News: nuovi prodotti e novità dai brand';
+const description = 'Le novità del catalogo ZAlight, gli ultimi articoli e le news ufficiali dei produttori (Chauvet Professional, Gantom, Lites e altri), aggiornate automaticamente. A cura di ARTCONTENT, agenzia ZAlight per Emilia-Romagna e Marche.';
+const synced = new Intl.DateTimeFormat('it-IT', { dateStyle: 'long' }).format(new Date(meta.syncedAt));
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container-x pt-8 sm:pt-12">
+    <Breadcrumbs items={[{ label: 'News' }]} />
+    <SectionHeading as="h1" class="mt-6" eyebrow="News" title="Sempre aggiornati su prodotti e brand" description={`Nuovi arrivi a catalogo, articoli ZAlight e comunicati dai siti ufficiali dei produttori. Ultima sincronizzazione del catalogo: ${synced}; gli articoli ZAlight si aggiornano in tempo reale.`} />
+  </section>
+
+  <section class="container-x section pt-12">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <h2 class="heading-lg">Nuovi a catalogo</h2>
+      <a href="/prodotti?new=1" class="btn-secondary shrink-0">Tutte le novità</a>
+    </div>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {novita.map((p, i) => <ProductCard product={p} priority={i < 4} />)}
+    </div>
+  </section>
+
+  <section class="bg-ink-900/50">
+    <div class="container-x section">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <h2 class="heading-lg">Ultime da ZAlight</h2>
+        <a href="/case-study" class="btn-secondary shrink-0">Tutti i case study</a>
+      </div>
+      <div class="mt-8">
+        <LiveNews limit={6} />
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x section">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h2 class="heading-lg">Dai siti ufficiali dei vendor</h2>
+        <p class="mt-2 max-w-2xl text-sm text-ink-300">
+          Feed raccolti da {brandsWithFeed.map((b) => b.name).join(', ')}. Per gli altri brand, il link al sito ufficiale è qui sotto.
+        </p>
+      </div>
+    </div>
+    <div class="mt-8">
+      <VendorNewsList limit={vendorNews.length} />
+    </div>
+    <h3 class="mt-12 text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Siti ufficiali dei brand</h3>
+    <ul class="mt-4 flex flex-wrap gap-2">
+      {
+        brandsWithSite.map((b) => (
+          <li>
+            <a href={b.website!} target="_blank" rel="noopener" class="chip hover:border-amber-400/60 hover:text-amber-300">
+              {b.name} ↗
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="container-x pb-6">
+    <div class="card flex flex-col items-start justify-between gap-6 p-8 md:flex-row md:items-center">
+      <div>
+        <h2 class="heading-md">Newsletter ZAlight</h2>
+        <p class="mt-2 text-sm text-ink-300">Nuovi prodotti, fiere, demo day e offerte: iscriviti alla newsletter ufficiale del distributore.</p>
+      </div>
+      <a href={zalight.newsletter} target="_blank" rel="noopener" class="btn-secondary shrink-0">Iscriviti ↗</a>
+    </div>
+  </section>
+
+  <CtaBanner compact title="Vuoi vedere le novità dal vivo?" description="Organizziamo demo day sul territorio con le ultime uscite. Lascia i tuoi riferimenti e ti avvisiamo quando siamo nella tua zona." primaryLabel="Avvisami" />
+</BaseLayout>

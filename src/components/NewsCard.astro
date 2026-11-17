@@ -1,0 +1,66 @@
+---
+import RemoteImage from './RemoteImage.astro';
+import type { Post } from '../lib/catalog';
+import { formatDate, productsMentionedIn } from '../lib/catalog';
+
+interface Props {
+  post: Post;
+  featured?: boolean;
+  /** Mostra i prodotti citati nel titolo con link al catalogo. */
+  showProducts?: boolean;
+  priority?: boolean;
+}
+const { post, featured = false, showProducts = true, priority = false } = Astro.props;
+const mentioned = showProducts ? productsMentionedIn(post.title, 3) : [];
+---
+
+<article
+  class:list={['card card-hover group relative flex flex-col overflow-hidden', featured && 'lg:col-span-2 lg:flex-row']}
+  data-post-id={post.id}
+>
+  <div class:list={['relative overflow-hidden bg-ink-700', featured ? 'aspect-[16/10] lg:aspect-auto lg:w-1/2' : 'aspect-[16/10]']}>
+    {
+      post.image ? (
+        <RemoteImage
+          src={post.image}
+          alt=""
+          width={featured ? 960 : 640}
+          aspect={16 / 10}
+          fit="cover"
+          priority={priority}
+          sizes={featured ? '(min-width:1024px) 50vw, 100vw' : '(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw'}
+          class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      ) : (
+        <div class="grid-glow h-full w-full" />
+      )
+    }
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent"></div>
+  </div>
+  <div class:list={['flex flex-1 flex-col gap-3 p-5', featured && 'lg:p-8']}>
+    <p class="flex items-center gap-2 text-xs text-ink-300">
+      <time datetime={post.date}>{formatDate(post.date)}</time>
+      <span aria-hidden="true">·</span>
+      <span class="text-amber-400">Case study ZAlight</span>
+    </p>
+    <h3 class:list={['font-display font-semibold leading-snug text-ink-50', featured ? 'text-2xl lg:text-3xl' : 'text-lg']}>
+      <a href={post.url} target="_blank" rel="noopener" class="after:absolute after:inset-0 after:content-['']">
+        {post.title}
+      </a>
+    </h3>
+    {post.excerpt && <p class:list={['text-sm leading-relaxed text-ink-300', featured ? 'line-clamp-4' : 'line-clamp-3']}>{post.excerpt}</p>}
+    {
+      mentioned.length > 0 && (
+        <ul class="relative z-10 mt-auto flex flex-wrap gap-1.5 pt-2">
+          {mentioned.map((p) => (
+            <li>
+              <a href={`/prodotti/${p.slug}`} class="chip hover:border-amber-400/60 hover:text-amber-300">
+                {p.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</article>

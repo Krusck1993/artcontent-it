@@ -1,0 +1,54 @@
+---
+import RemoteImage from './RemoteImage.astro';
+import type { Product } from '../lib/catalog';
+import { brandLabel, getTipologia } from '../lib/catalog';
+
+interface Props {
+  product: Product;
+  /** Attributi data-* per il filtro client-side. */
+  filterable?: boolean;
+  priority?: boolean;
+  class?: string;
+}
+
+const { product, filterable = false, priority = false, class: className = '' } = Astro.props;
+const tipologia = product.tipologie.map((t) => getTipologia(t)?.name).filter(Boolean)[0];
+const search = [product.name, product.shortDescription, brandLabel(product.brand), tipologia].join(' ').toLowerCase();
+---
+
+<article
+  class:list={['card card-hover group relative flex flex-col overflow-hidden', className]}
+  data-brand={filterable ? product.brand : undefined}
+  data-tipologie={filterable ? product.tipologie.join(' ') : undefined}
+  data-settori={filterable ? product.settori.join(' ') : undefined}
+  data-search={filterable ? search : undefined}
+  data-new={filterable ? String(product.isNew) : undefined}
+>
+  <a href={`/prodotti/${product.slug}`} class="block bg-white p-4" aria-label={product.name}>
+    <div class="relative aspect-square overflow-hidden">
+      {
+        product.image && (
+          <RemoteImage
+            src={product.image}
+            alt={product.imageAlt}
+            width={480}
+            aspect={1}
+            fit="contain"
+            sizes="(min-width: 1280px) 280px, (min-width: 768px) 30vw, 45vw"
+            priority={priority}
+            class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+        )
+      }
+    </div>
+  </a>
+  {product.isNew && <span class="absolute top-3 left-3 rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold tracking-wider text-ink-950 uppercase">Novità</span>}
+  <div class="flex flex-1 flex-col gap-1.5 p-4">
+    <p class="text-[11px] font-semibold tracking-[0.14em] text-amber-400 uppercase">{brandLabel(product.brand)}</p>
+    <h3 class="font-display text-base font-semibold leading-snug text-ink-50">
+      <a href={`/prodotti/${product.slug}`} class="after:absolute after:inset-0 after:content-['']">{product.name}</a>
+    </h3>
+    {product.shortDescription && <p class="line-clamp-2 text-xs leading-relaxed text-ink-300">{product.shortDescription}</p>}
+    {tipologia && <p class="mt-auto pt-2 text-[11px] text-ink-300">{tipologia}</p>}
+  </div>
+</article>

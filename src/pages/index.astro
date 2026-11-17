@@ -1,0 +1,341 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RemoteImage from '../components/RemoteImage.astro';
+import ProductCard from '../components/ProductCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import LiveNews from '../components/LiveNews.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { site, zalight, territory } from '../config/site';
+import { featuredProducts, sortedBrands, settori, meta, references, getBrand } from '../lib/catalog';
+
+const featured = featuredProducts(8);
+// Hero: preferisci una testa mobile/proiettore Chauvet Professional tra i prodotti in evidenza
+const heroProduct =
+  featured.find((p) => p.brand === 'chauvet' && p.tipologie.some((t) => t.startsWith('teste-mobili'))) ??
+  featured.find((p) => p.brand === 'chauvet') ??
+  featured[0];
+const heroSecondary = featured.filter((p) => p !== heroProduct).slice(0, 2);
+const brandList = sortedBrands();
+const chauvet = getBrand('chauvet');
+
+const services = [
+  {
+    title: 'Consulenza tecnico-commerciale',
+    text: 'Analizziamo il progetto con te e specifichiamo i prodotti giusti per budget, resa e affidabilità: dalla singola testa mobile alla dotazione completa di uno studio.',
+    icon: 'M12 3v2m0 14v2m9-9h-2M5 12H3m14.1-6.1-1.4 1.4M8.3 15.7l-1.4 1.4m0-10.2 1.4 1.4m7.4 7.4 1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z',
+  },
+  {
+    title: 'Demo on-site e prove sul campo',
+    text: 'Portiamo i proiettori dove servono: teatro, studio, service, palazzetto. Li provi nelle tue condizioni reali, con il nostro tecnico al fianco.',
+    icon: 'M4 6h16M4 12h16M4 18h10m4-3 3 3-3 3',
+  },
+  {
+    title: 'Progetto illuminotecnico e rendering',
+    text: 'Con il reparto tecnico ZAlight realizziamo layout, calcoli fotometrici e rendering 3D per presentare al cliente finale un risultato certo.',
+    icon: 'M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6',
+  },
+  {
+    title: 'Avvio, programmazione e formazione',
+    text: 'Supporto all’installazione, patch e configurazione dei controlli (DMX, Art-Net, sACN, CRMX), corsi teorico-pratici per gli operatori.',
+    icon: 'M12 14l9-5-9-5-9 5 9 5Zm0 0v7m-6-4v-4.5M18 17v-4.5',
+  },
+  {
+    title: 'Post-vendita e assistenza',
+    text: 'Garanzia ufficiale, ricambi e centro assistenza ZAlight in Italia. Un referente unico che segue la pratica fino alla chiusura.',
+    icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Zm-3-10 2 2 4-4',
+  },
+  {
+    title: 'Fornitura e logistica',
+    text: 'Disponibilità a magazzino in Italia, tempi certi e condizioni dedicate per rental, installatori, system integrator e rivenditori.',
+    icon: 'M3 7h11v10H3zM14 10h4l3 3v4h-7zM7.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z',
+  },
+];
+
+const stats = [
+  { value: String(meta.counts.brands), label: 'brand distribuiti' },
+  { value: `${meta.counts.products}+`, label: 'prodotti a catalogo' },
+  { value: '2', label: 'regioni seguite' },
+  { value: '14', label: 'province coperte' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${site.url}/prodotti?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<BaseLayout title={`${site.name} – ${site.tagline}`} description={site.description} schema={schema}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="grid-glow absolute inset-0 opacity-70"></div>
+      <div class="absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-amber-500/20 blur-3xl animate-beam"></div>
+      <div class="absolute top-1/3 -right-40 h-[420px] w-[420px] rounded-full bg-beam-500/15 blur-3xl"></div>
+    </div>
+    <div class="container-x grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
+      <div class="animate-fade-up">
+        <p class="eyebrow">Agenzia ufficiale ZAlight · Emilia-Romagna & Marche</p>
+        <h1 class="heading-xl mt-5">
+          La luce dei grandi brand,<br />
+          <span class="text-gradient-amber">con un partner tecnico</span> sul tuo territorio.
+        </h1>
+        <p class="lead mt-6 max-w-xl">
+          Siamo i commerciali tecnici che rappresentano <strong class="text-ink-50">ZAlight</strong> – distributore esclusivo per
+          l’Italia di Chauvet Professional, Chauvet DJ e Iluminarc – in Emilia-Romagna e Marche. Consulenza, demo, progetto e
+          assistenza: un solo interlocutore, dal preventivo al palco.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="/contatti" class="btn-primary text-base">Richiedi una consulenza</a>
+          <a href="/prodotti" class="btn-secondary text-base">Esplora il catalogo</a>
+        </div>
+        <dl class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+          {
+            stats.map((s) => (
+              <div>
+                <dt class="sr-only">{s.label}</dt>
+                <dd class="font-display text-3xl font-bold text-ink-50">{s.value}</dd>
+                <dd class="text-xs tracking-wide text-ink-300 uppercase">{s.label}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div class="pointer-events-none absolute inset-0 -z-10 rounded-full bg-amber-500/30 blur-3xl"></div>
+        {
+          heroProduct?.image && (
+            <a href={`/prodotti/${heroProduct.slug}`} class="card group block overflow-hidden bg-white p-6 shadow-glow-amber">
+              <RemoteImage
+                src={heroProduct.image}
+                alt={heroProduct.imageAlt}
+                width={720}
+                aspect={1}
+                fit="contain"
+                priority
+                sizes="(min-width:1024px) 40vw, 90vw"
+                class="h-auto w-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div class="mt-2 flex items-end justify-between gap-3 text-ink-900">
+                <div>
+                  <p class="text-[11px] font-semibold tracking-[0.14em] text-[#8a5a00] uppercase">{getBrand(heroProduct.brand)?.name}</p>
+                  <p class="font-display text-xl font-bold">{heroProduct.name}</p>
+                </div>
+                <span class="text-xs text-ink-500">{heroProduct.shortDescription}</span>
+              </div>
+            </a>
+          )
+        }
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          {
+            heroSecondary.map(
+              (p) =>
+                p.image && (
+                  <a href={`/prodotti/${p.slug}`} class="card card-hover flex items-center gap-3 bg-white p-3 text-ink-900">
+                    <RemoteImage src={p.image} alt={p.imageAlt} width={160} aspect={1} fit="contain" class="h-16 w-16 object-contain" sizes="64px" />
+                    <span class="min-w-0">
+                      <span class="block truncate text-[10px] font-semibold tracking-wider text-[#8a5a00] uppercase">{getBrand(p.brand)?.name}</span>
+                      <span class="block truncate font-display text-sm font-bold">{p.name}</span>
+                    </span>
+                  </a>
+                ),
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND MARQUEE -->
+  <section class="border-y border-white/5 bg-ink-900/60 py-8">
+    <div class="container-x mb-5 flex flex-wrap items-center justify-between gap-3 text-xs text-ink-300">
+      <p><span class="font-semibold text-ink-100">{meta.counts.brands} brand professionali</span> distribuiti in Italia da ZAlight</p>
+      <a href="/vendor" class="font-semibold text-amber-400 hover:underline">Tutti i vendor →</a>
+    </div>
+    <div class="marquee overflow-hidden">
+      <ul class="flex w-max animate-marquee gap-4 pr-4 hover:[animation-play-state:paused]" aria-label="Loghi dei brand distribuiti">
+        {
+          [...brandList, ...brandList].map((b, i) => (
+            <li aria-hidden={i >= brandList.length ? 'true' : undefined}>
+              <a href={`/vendor/${b.slug}`} class="flex h-20 w-40 items-center justify-center rounded-xl bg-white p-4" title={b.name} tabindex={i >= brandList.length ? -1 : undefined}>
+                {b.logo ? <RemoteImage src={b.logo} alt={b.name} width={200} class="max-h-12 w-auto object-contain" sizes="128px" /> : <span class="text-sm font-bold text-ink-900">{b.name}</span>}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section class="section container-x">
+    <SectionHeading
+      eyebrow="Cosa facciamo per te"
+      title="Non vendiamo proiettori. Risolviamo progetti luce."
+      description="Siamo tecnici prima che commerciali: conosciamo i prodotti perché li programmiamo, li montiamo e li mettiamo in scena ogni settimana con rental, teatri, studi TV e installatori del territorio."
+    />
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((s) => (
+          <article class="card card-hover p-6">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/15 text-amber-400">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={s.icon} />
+              </svg>
+            </span>
+            <h3 class="heading-md mt-5 text-xl sm:text-xl">{s.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{s.text}</p>
+          </article>
+        ))
+      }
+    </div>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="/servizi" class="btn-secondary">Tutti i servizi</a>
+      <a href="/contatti" class="btn-ghost">Prenota una demo →</a>
+    </div>
+  </section>
+
+  <!-- PRODOTTI IN EVIDENZA -->
+  <section class="section bg-ink-900/50">
+    <div class="container-x">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <SectionHeading eyebrow="Catalogo" title="Prodotti in evidenza" description="Le novità e i best-seller del momento, selezionati da ZAlight. Catalogo completo con schede tecniche, video e disponibilità su richiesta." />
+        <a href="/prodotti" class="btn-secondary shrink-0">Tutti i {meta.counts.products} prodotti</a>
+      </div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {featured.map((p) => <ProductCard product={p} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTORI -->
+  <section class="section container-x">
+    <SectionHeading eyebrow="Settori" title="Una soluzione per ogni palco, studio e spazio" description="Dai tour negli stadi alle sale consiliari, dal broadcast all’architetturale: scegli il tuo ambito e scopri i prodotti che ZAlight consiglia." />
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        settori.map((s) => (
+          <a href={`/settori/${s.slug}`} class="card card-hover group relative aspect-[4/3] overflow-hidden">
+            {s.gallery[0] && (
+              <RemoteImage src={s.gallery[0]} alt="" width={640} aspect={4 / 3} fit="cover" class="h-full w-full object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100" sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" />
+            )}
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-transparent" />
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <h3 class="font-display text-xl font-bold text-ink-50">{s.name}</h3>
+              <p class="mt-1 text-xs text-ink-300">{s.count} prodotti consigliati →</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- PERCHÉ ZALIGHT -->
+  <section class="section bg-ink-900/50">
+    <div class="container-x grid items-center gap-12 lg:grid-cols-2">
+      <div class="relative">
+        <div class="card overflow-hidden">
+          <RemoteImage src={zalight.teamPhoto} alt="Il team ZAlight" width={960} aspect={3 / 2} fit="cover" class="h-auto w-full object-cover" sizes="(min-width:1024px) 50vw, 100vw" />
+        </div>
+        <div class="card absolute -right-4 -bottom-6 flex max-w-xs items-center gap-4 bg-ink-800 p-4 shadow-glow-amber sm:-right-8">
+          {chauvet?.logo && <RemoteImage src={chauvet.logo} alt="Chauvet Professional" width={160} aspect={1} fit="contain" class="h-14 w-14 rounded-lg bg-white object-contain p-1" sizes="56px" />}
+          <p class="text-xs leading-snug text-ink-200">
+            <strong class="block text-sm text-ink-50">Best Distributor EMEA 2024</strong>
+            ZAlight premiata da Chauvet Professional come miglior distributore dell’area EMEA.
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Il nostro mandante</p>
+        <h2 class="heading-lg mt-3">ZAlight: distribuzione esclusiva e assistenza in Italia</h2>
+        <div class="prose-custom mt-6">
+          <p>
+            Fondata nel 2013 a Moglia (MN), <strong>ZAlight</strong> è il distributore esclusivo per l’Italia di
+            <strong>Chauvet Professional</strong>, <strong>Chauvet DJ</strong> e <strong>Iluminarc</strong>, e porta nel nostro Paese
+            un portafoglio di {meta.counts.brands} brand selezionati per broadcast, spettacolo, teatro, cinema, eventi e architetturale.
+          </p>
+          <p>
+            Showroom, reparto tecnico, magazzino in Italia e un team che lavora ogni giorno sui più grandi tour italiani: come agenzia
+            per Emilia-Romagna e Marche portiamo tutto questo direttamente da te, con la rapidità di un interlocutore locale.
+          </p>
+        </div>
+        <ul class="mt-6 grid gap-3 text-sm text-ink-200 sm:grid-cols-2">
+          {['Distribuzione esclusiva Italia', 'Garanzia e assistenza ufficiale', 'Magazzino e ricambi in Italia', 'Formazione tecnica certificata', 'Showroom e demo room', 'Rendering 3D e progetti'].map((t) => (
+            <li class="flex items-center gap-2">
+              <svg class="h-4 w-4 shrink-0 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>
+              {t}
+            </li>
+          ))}
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/vendor" class="btn-primary">Scopri i vendor</a>
+          <a href={zalight.url} target="_blank" rel="noopener" class="btn-ghost">zalight.it ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENZE -->
+  {
+    references.length > 0 && (
+      <section class="container-x py-14">
+        <p class="text-center text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Network e produzioni che hanno scelto ZAlight</p>
+        <ul class="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5 lg:grid-cols-10">
+          {references.slice(0, 20).map((r) => (
+            <li class="flex aspect-[3/2] items-center justify-center rounded-xl bg-white p-3">
+              <RemoteImage src={r.url} alt={r.name} width={160} class="max-h-10 w-auto object-contain" sizes="100px" />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <!-- CASE STUDY -->
+  <section class="section container-x">
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <SectionHeading eyebrow="Case study" title="Sul palco con i grandi tour italiani" description="Tiziano Ferro, Vasco, Mengoni, Ultimo, Annalisa, Sanremo: le storie di prodotto raccontate da ZAlight, aggiornate automaticamente." />
+      <a href="/case-study" class="btn-secondary shrink-0">Tutti i case study</a>
+    </div>
+    <div class="mt-12">
+      <LiveNews limit={3} />
+    </div>
+  </section>
+
+  <!-- TERRITORIO -->
+  <section class="section bg-ink-900/50">
+    <div class="container-x grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <div>
+        <p class="eyebrow">Dove operiamo</p>
+        <h2 class="heading-lg mt-3">Emilia-Romagna e Marche, provincia per provincia</h2>
+        <p class="lead mt-5">
+          Sopralluoghi e demo in giornata, consegne rapide e un tecnico che parla la tua lingua. Lavoriamo con service e rental,
+          teatri e fondazioni, emittenti TV e radio, installatori, system integrator, studi di architettura e lighting designer.
+        </p>
+        <a href="/contatti" class="btn-primary mt-8">Fissa un sopralluogo</a>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          territory.regions.map((r) => (
+            <div class="card p-6">
+              <h3 class="font-display text-xl font-bold text-ink-50">{r.name}</h3>
+              <ul class="mt-4 flex flex-wrap gap-2">
+                {r.provinces.map((p) => (
+                  <li class="chip">{p}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</BaseLayout>

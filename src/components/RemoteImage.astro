@@ -1,0 +1,68 @@
+---
+/**
+ * Immagine remota (zalight.it) ottimizzata a build-time con astro:assets.
+ * Ricava le dimensioni originali (con cache di processo) per mantenere l'aspect ratio
+ * e limita la larghezza richiesta a quella reale per evitare upscaling.
+ * Se l'origine non è raggiungibile, degrada a un <img> semplice senza rompere la build.
+ */
+import { Image, inferRemoteSize } from 'astro:assets';
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends Omit<HTMLAttributes<'img'>, 'src' | 'width' | 'height'> {
+  src: string;
+  alt: string;
+  /** Larghezza di rendering desiderata (px). */
+  width: number;
+  /** Forza un rapporto larghezza/altezza (es. 1 per quadrato, 16/9). Default: originale. */
+  aspect?: number;
+  fit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  position?: string;
+  priority?: boolean;
+  sizes?: string;
+  widths?: number[];
+  quality?: number | 'low' | 'mid' | 'high' | 'max';
+}
+
+const { src, alt, width, aspect, fit, position, priority, sizes, widths, quality, ...rest } = Astro.props;
+
+type Size = { width: number; height: number };
+const cache: Map<string, Promise<Size | null>> = ((globalThis as Record<string, unknown>).__artcontentRemoteSizes ??=
+  new Map()) as Map<string, Promise<Size | null>>;
+
+function getSize(url: string): Promise<Size | null> {
+  if (!cache.has(url)) {
+    cache.set(
+      url,
+      inferRemoteSize(url)
+        .then((s) => ({ width: s.width, height: s.height }))
+        .catch(() => null),
+    );
+  }
+  return cache.get(url)!;
+}
+
+const original = await getSize(src);
+const targetWidth = original ? Math.min(width, original.width) : width;
+const ratio = aspect ?? (original ? original.width / original.height : 1);
+const targetHeight = Math.round(targetWidth / ratio);
+---
+
+{
+  original ? (
+    <Image
+      src={src}
+      alt={alt}
+      width={targetWidth}
+      height={targetHeight}
+      fit={fit}
+      position={position}
+      priority={priority}
+      sizes={sizes}
+      widths={widths}
+      quality={quality ?? 'mid'}
+      {...rest}
+    />
+  ) : (
+    <img src={src} alt={alt} width={targetWidth} height={targetHeight} loading={priority ? 'eager' : 'lazy'} decoding="async" {...rest} />
+  )
+}

@@ -1,0 +1,172 @@
+---
+import { site, territory } from '../config/site';
+import { brands, settori } from '../lib/catalog';
+
+interface Props {
+  /** Pre-compila oggetto/prodotto (es. da pagina prodotto). */
+  subject?: string;
+  compact?: boolean;
+}
+const { subject = '', compact = false } = Astro.props;
+const provinces = territory.regions.flatMap((r) => r.provinces.map((p) => `${p} (${r.name})`));
+const topBrands = [...brands].sort((a, b) => b.productCount - a.productCount).slice(0, 10);
+---
+
+<form
+  id="contact-form"
+  class:list={['card grid gap-5 p-6 sm:p-8', compact ? '' : 'lg:grid-cols-2']}
+  method="POST"
+  action={site.formEndpoint || undefined}
+  data-endpoint={site.formEndpoint}
+  data-mailto={site.email}
+  novalidate
+>
+  <input type="hidden" name="_subject" value={subject ? `Richiesta: ${subject}` : 'Richiesta dal sito ARTCONTENT'} />
+  <input type="hidden" name="_source" value="artcontent.it" />
+  <!-- honeypot anti-spam -->
+  <div class="hidden" aria-hidden="true">
+    <label>Non compilare <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+  </div>
+
+  <div class="grid gap-1.5">
+    <label for="cf-name" class="text-sm font-medium text-ink-100">Nome e cognome *</label>
+    <input id="cf-name" name="name" type="text" required autocomplete="name" class="field" />
+  </div>
+  <div class="grid gap-1.5">
+    <label for="cf-company" class="text-sm font-medium text-ink-100">Azienda / Organizzazione</label>
+    <input id="cf-company" name="company" type="text" autocomplete="organization" class="field" />
+  </div>
+  <div class="grid gap-1.5">
+    <label for="cf-email" class="text-sm font-medium text-ink-100">Email *</label>
+    <input id="cf-email" name="email" type="email" required autocomplete="email" class="field" />
+  </div>
+  <div class="grid gap-1.5">
+    <label for="cf-phone" class="text-sm font-medium text-ink-100">Telefono</label>
+    <input id="cf-phone" name="phone" type="tel" autocomplete="tel" class="field" />
+  </div>
+  <div class="grid gap-1.5">
+    <label for="cf-province" class="text-sm font-medium text-ink-100">Provincia</label>
+    <select id="cf-province" name="province" class="field">
+      <option value="">Seleziona…</option>
+      {provinces.map((p) => <option value={p}>{p}</option>)}
+      <option value="Altro">Altra provincia</option>
+    </select>
+  </div>
+  <div class="grid gap-1.5">
+    <label for="cf-sector" class="text-sm font-medium text-ink-100">Settore di applicazione</label>
+    <select id="cf-sector" name="sector" class="field">
+      <option value="">Seleziona…</option>
+      {settori.map((s) => <option value={s.name}>{s.name}</option>)}
+      <option value="Rental / Service">Rental / Service</option>
+      <option value="Altro">Altro</option>
+    </select>
+  </div>
+  <div class="grid gap-1.5 lg:col-span-2">
+    <span class="text-sm font-medium text-ink-100">Brand di interesse</span>
+    <div class="flex flex-wrap gap-2">
+      {
+        topBrands.map((b) => (
+          <label class="chip cursor-pointer has-[:checked]:border-amber-400/60 has-[:checked]:bg-amber-500/15 has-[:checked]:text-amber-300">
+            <input type="checkbox" name="brands" value={b.name} class="sr-only" />
+            {b.name}
+          </label>
+        ))
+      }
+    </div>
+  </div>
+  <div class="grid gap-1.5 lg:col-span-2">
+    <label for="cf-message" class="text-sm font-medium text-ink-100">Descrivi il progetto *</label>
+    <textarea
+      id="cf-message"
+      name="message"
+      rows="5"
+      required
+      class="field resize-y"
+      placeholder={subject ? `Vorrei informazioni su ${subject}…` : 'Tipologia di evento o installazione, numero di proiettori, tempistiche, budget indicativo…'}
+    >{subject ? `Vorrei informazioni su ${subject}.\n\n` : ''}</textarea>
+  </div>
+  <div class="flex items-start gap-3 lg:col-span-2">
+    <input id="cf-privacy" name="privacy" type="checkbox" required class="mt-1 h-4 w-4 rounded border-ink-500 bg-ink-800 accent-amber-500" />
+    <label for="cf-privacy" class="text-xs leading-relaxed text-ink-300">
+      Ho letto l'<a href="/privacy-policy" class="text-amber-400 hover:underline">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *
+    </label>
+  </div>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center lg:col-span-2">
+    <button type="submit" class="btn-primary text-base">Invia richiesta</button>
+    <p class="text-xs text-ink-300">Rispondiamo entro 1 giorno lavorativo. Per urgenze: <a href={site.phoneHref} class="text-ink-100 hover:text-amber-400">{site.phone}</a></p>
+  </div>
+  <p id="cf-status" class="hidden rounded-xl px-4 py-3 text-sm lg:col-span-2" role="status" aria-live="polite"></p>
+</form>
+
+<style>
+  @reference '../styles/global.css';
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-3 text-sm text-ink-50 placeholder:text-ink-500 transition-colors focus:border-amber-400/70 focus:outline-none;
+  }
+  select.field {
+    appearance: none;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%238a8aa3' stroke-width='2'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('cf-status');
+
+  function show(kind: 'ok' | 'error', text: string) {
+    if (!status) return;
+    status.textContent = text;
+    status.className = `rounded-xl px-4 py-3 text-sm lg:col-span-2 ${
+      kind === 'ok' ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30' : 'bg-red-500/15 text-red-300 border border-red-500/30'
+    }`;
+    status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      if ((data.get('_gotcha') as string)?.length) return; // bot
+
+      const endpoint = form.dataset.endpoint;
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
+      if (button) button.disabled = true;
+
+      if (!endpoint) {
+        // Fallback senza backend: apre il client di posta con il messaggio precompilato.
+        const lines = [
+          `Nome: ${data.get('name')}`,
+          `Azienda: ${data.get('company') || '-'}`,
+          `Email: ${data.get('email')}`,
+          `Telefono: ${data.get('phone') || '-'}`,
+          `Provincia: ${data.get('province') || '-'}`,
+          `Settore: ${data.get('sector') || '-'}`,
+          `Brand: ${data.getAll('brands').join(', ') || '-'}`,
+          '',
+          String(data.get('message') ?? ''),
+        ];
+        const subject = encodeURIComponent(String(data.get('_subject')));
+        window.location.href = `mailto:${form.dataset.mailto}?subject=${subject}&body=${encodeURIComponent(lines.join('\n'))}`;
+        show('ok', 'Si aprirà il tuo client di posta con la richiesta precompilata. Se non succede, scrivici a ' + form.dataset.mailto);
+        if (button) button.disabled = false;
+        return;
+      }
+
+      try {
+        const res = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        show('ok', 'Richiesta inviata. Ti ricontatteremo entro 1 giorno lavorativo.');
+      } catch {
+        show('error', `Invio non riuscito. Scrivici direttamente a ${form.dataset.mailto} o chiamaci.`);
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  }
+</script>

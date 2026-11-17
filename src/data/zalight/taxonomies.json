@@ -1,0 +1,273 @@
+{
+  "settori": [
+    {
+      "id": 45,
+      "name": "Architetturale",
+      "slug": "architetturale",
+      "count": 124,
+      "zalightUrl": "https://www.zalight.it/settore/architetturale/",
+      "description": [
+        "Una gamma di proiettori e moduli luce LED ad elevato indice di resa cromatica che offrono ad Architetti e Lighting Designers una flessibilità senza precedenti in una varietà di applicazioni: dall’illuminazione da esterno all’interior design; dalle installazioni interattive, museali e in parchi tematici, all’illuminazione di esercizi commerciali e show room; nonché alla riqualificazione energetica di spazi privati e pubblici."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Museo.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Parco.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Tricolore-esterno.jpg"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Broadcast",
+      "slug": "broadcast",
+      "count": 155,
+      "zalightUrl": "https://www.zalight.it/settore/broadcast/",
+      "description": [
+        "Un settore in costante evoluzione, con ritmi di produzione serrati e un aggiornamento tecnologico continuo. Scoprite i nostri prodotti espressamente dedicati ai Direttori della Fotografia, cameramen e tecnici, impegnati in studi TV, Web Radio e news room."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/News-Room.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Studio.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Web-Radio.jpg"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Cinema",
+      "slug": "cinema",
+      "count": 55,
+      "zalightUrl": "https://www.zalight.it/settore/cinema/",
+      "description": [
+        "Una gamma di prodotti e accessori di provata qualità per i Direttori della Fotografia più esigenti e le produzioni cinematografiche più impegnative; dai film ai documentari, sia in studio che on-location."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Iconico-scaled.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Riprese-esterno.jpeg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Riprese-interno-scaled.jpeg"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "ENG & Streaming",
+      "slug": "eng-streaming",
+      "count": 29,
+      "zalightUrl": "https://www.zalight.it/settore/eng-streaming/",
+      "description": [
+        "Prodotti di grande affidabilità, testati nelle condizioni più difficili, che uniscono versatilità di impiego e prestazioni top.\nPerfetti per tutti gli utilizzi ENG e mobili, ideali anche in studio in una gamma di applicazioni, come set fotografici, per videoproduzioni e per streaming video."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/ENG.jpeg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/SET-FOTO-1-scaled.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/STREAMING.jpg"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Eventi",
+      "slug": "eventi",
+      "count": 40,
+      "zalightUrl": "https://www.zalight.it/settore/eventi/",
+      "description": [
+        "Una varietà di effetti luminosi che creano un’atmosfera esclusiva, in applicazioni dove eleganza e compattezza di lampade e proiettori sono requisiti fondamentali. Ideali in conventions, eventi privati e istituzionali; perfetti anche per setups semipermanenti."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Esterno.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/EVENTI2-scaled.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Evento-luci.jpg"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Mostre & Fiere",
+      "slug": "mostre-fiere",
+      "count": 86,
+      "zalightUrl": "https://www.zalight.it/settore/mostre-fiere/",
+      "description": [
+        "Un’ampia scelta di proiettori compatti e robusti con prestazioni ottiche superiori, e una gamma completa di torri e tralicci, per una flessibilità operativa che semplifica ogni setup, anche quelli più complessi. Ideali per allestimenti fieristici, mostre ed esposizioni temporanee."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Allestimento-scaled.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Fiera.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Mostra.jpg"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Spettacolo",
+      "slug": "spettacolo",
+      "count": 210,
+      "zalightUrl": "https://www.zalight.it/settore/spettacolo/",
+      "description": [
+        "Le soluzioni tecnologiche più innovative per setup illuminotecnici ed illuminazioni scenografiche di grande efficacia.\nUn’offerta di prodotti completa, per show di qualunque dimensione: dai concerti ai grandi tour; dai palchi live per ogni tipo di evento alle sfilate di moda; dai club alle discoteche, fino agli eventi live televisivi."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Discoteca.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Eurovision-Live-TV.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Sfilata.jpg"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Teatro",
+      "slug": "teatro",
+      "count": 151,
+      "zalightUrl": "https://www.zalight.it/settore/teatro/",
+      "description": [
+        "Una varietà di soluzioni che aggiornano tecnologicamente un’arte millenaria, ed esaltano in maniera inedita la creatività dei professionisti dell'illuminazione teatrale. Per palcoscenici teatrali e spettacoli teatrali itineranti; ma anche per sale multimediali, e per l’illuminazione di servizio e la riqualificazione energetica di qualunque location."
+      ],
+      "gallery": [
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Balletto.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Musical.jpg",
+        "https://www.zalight.it/luce/wp-content/uploads/2023/01/Platea.jpg"
+      ]
+    }
+  ],
+  "tipologie": [
+    {
+      "id": 74,
+      "name": "Accessori",
+      "slug": "accessori",
+      "count": 6,
+      "zalightUrl": "https://www.zalight.it/tipologia/accessori/"
+    },
+    {
+      "id": 241,
+      "name": "Audio",
+      "slug": "audio",
+      "count": 1,
+      "zalightUrl": "https://www.zalight.it/tipologia/audio/"
+    },
+    {
+      "id": 95,
+      "name": "Barre e wash led",
+      "slug": "barre-led",
+      "count": 36,
+      "zalightUrl": "https://www.zalight.it/tipologia/barre-led/"
+    },
+    {
+      "id": 78,
+      "name": "Batterie e caricatori",
+      "slug": "batterie-e-caricatori",
+      "count": 13,
+      "zalightUrl": "https://www.zalight.it/tipologia/batterie-e-caricatori/"
+    },
+    {
+      "id": 148,
+      "name": "Consolles e Controlli",
+      "slug": "controlli-wireless",
+      "count": 20,
+      "zalightUrl": "https://www.zalight.it/tipologia/controlli-wireless/"
+    },
+    {
+      "id": 242,
+      "name": "Diffusori di aroma",
+      "slug": "diffusori-di-aroma",
+      "count": 3,
+      "zalightUrl": "https://www.zalight.it/tipologia/diffusori-di-aroma/"
+    },
+    {
+      "id": 82,
+      "name": "Effetti sceno luminosi",
+      "slug": "effetti-scenici",
+      "count": 55,
+      "zalightUrl": "https://www.zalight.it/tipologia/effetti-scenici/"
+    },
+    {
+      "id": 108,
+      "name": "Fresnel led",
+      "slug": "fresnel-led",
+      "count": 23,
+      "zalightUrl": "https://www.zalight.it/tipologia/fresnel-led/"
+    },
+    {
+      "id": 83,
+      "name": "Macchine del fumo",
+      "slug": "macchine-del-fumo",
+      "count": 35,
+      "zalightUrl": "https://www.zalight.it/tipologia/macchine-del-fumo/"
+    },
+    {
+      "id": 196,
+      "name": "Networking",
+      "slug": "networking",
+      "count": 35,
+      "zalightUrl": "https://www.zalight.it/tipologia/networking/"
+    },
+    {
+      "id": 113,
+      "name": "Pannelli led",
+      "slug": "pannelli-led",
+      "count": 30,
+      "zalightUrl": "https://www.zalight.it/tipologia/pannelli-led/"
+    },
+    {
+      "id": 169,
+      "name": "Par e Spot led",
+      "slug": "par-e-spot-led",
+      "count": 69,
+      "zalightUrl": "https://www.zalight.it/tipologia/par-e-spot-led/"
+    },
+    {
+      "id": 85,
+      "name": "Proiettori a batteria",
+      "slug": "proiettori-a-batteria",
+      "count": 29,
+      "zalightUrl": "https://www.zalight.it/tipologia/proiettori-a-batteria/"
+    },
+    {
+      "id": 117,
+      "name": "Retrofit",
+      "slug": "retrofit",
+      "count": 21,
+      "zalightUrl": "https://www.zalight.it/tipologia/retrofit/"
+    },
+    {
+      "id": 89,
+      "name": "Sagomatori",
+      "slug": "sagomatori",
+      "count": 16,
+      "zalightUrl": "https://www.zalight.it/tipologia/sagomatori/"
+    },
+    {
+      "id": 184,
+      "name": "Seguipersona",
+      "slug": "seguipersona",
+      "count": 3,
+      "zalightUrl": "https://www.zalight.it/tipologia/seguipersona/"
+    },
+    {
+      "id": 124,
+      "name": "Sistemi di sospensione",
+      "slug": "sistemi-di-sospensione",
+      "count": 9,
+      "zalightUrl": "https://www.zalight.it/tipologia/sistemi-di-sospensione/"
+    },
+    {
+      "id": 185,
+      "name": "Strutture e pedane",
+      "slug": "strutture-e-pedane",
+      "count": 0,
+      "zalightUrl": "https://www.zalight.it/tipologia/strutture-e-pedane/"
+    },
+    {
+      "id": 161,
+      "name": "Teste mobili beam/spot",
+      "slug": "teste-mobili-beam-spot",
+      "count": 24,
+      "zalightUrl": "https://www.zalight.it/tipologia/teste-mobili-beam-spot/"
+    },
+    {
+      "id": 160,
+      "name": "Teste mobili profile",
+      "slug": "teste-mobili-profile",
+      "count": 7,
+      "zalightUrl": "https://www.zalight.it/tipologia/teste-mobili-profile/"
+    },
+    {
+      "id": 162,
+      "name": "Teste mobili wash",
+      "slug": "teste-mobili-wash",
+      "count": 16,
+      "zalightUrl": "https://www.zalight.it/tipologia/teste-mobili-wash/"
+    }
+  ]
+}
