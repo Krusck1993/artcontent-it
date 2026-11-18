@@ -31,7 +31,7 @@ const organization = {
   url: site.url,
   description: site.description,
   email: site.email,
-  telephone: site.phone,
+  ...(site.phone ? { telephone: site.phone } : {}),
   image: ogImage,
   address: {
     '@type': 'PostalAddress',

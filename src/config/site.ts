@@ -10,15 +10,15 @@ export const site = {
     'ARTCONTENT è l’agenzia tecnico-commerciale ZAlight per Emilia-Romagna e Marche: consulenza, demo on-site, progetti illuminotecnici e supporto su Chauvet Professional, Chauvet DJ, Iluminarc e tutti i brand distribuiti da ZAlight.',
   url: 'https://www.artcontent.it',
   locale: 'it_IT',
-  email: 'info@artcontent.it', // TODO: verificare
-  phone: '+39 000 000 0000', // TODO: numero reale
-  phoneHref: 'tel:+390000000000', // TODO: numero reale
-  whatsapp: 'https://wa.me/390000000000', // TODO: numero reale
+  email: 'zalight@artcontent.it',
+  phone: '',
+  phoneHref: '',
+  whatsapp: '',
   address: {
-    street: 'Via Esempio, 1', // TODO
-    city: 'Bologna', // TODO
-    province: 'BO', // TODO
-    zip: '40100', // TODO
+    street: 'Via Persicetana Vecchia, 28',
+    city: 'Bologna',
+    province: 'BO',
+    zip: '40132',
     region: 'Emilia-Romagna',
     country: 'IT',
   },

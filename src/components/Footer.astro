@@ -45,7 +45,6 @@ const synced = new Intl.DateTimeFormat('it-IT', { dateStyle: 'medium', timeStyle
         <h3 class="text-xs font-semibold tracking-[0.18em] text-ink-300 uppercase">Contatti</h3>
         <ul class="mt-4 space-y-2.5 text-sm text-ink-200">
           <li><a href={`mailto:${site.email}`} class="hover:text-amber-400">{site.email}</a></li>
-          <li><a href={site.phoneHref} class="hover:text-amber-400">{site.phone}</a></li>
           <li>{site.address.street}<br />{site.address.zip} {site.address.city} ({site.address.province})</li>
           <li class="text-ink-300">{site.openingHours}</li>
         </ul>
